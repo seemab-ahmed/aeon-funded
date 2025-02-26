@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useMemo} from "react";
 import Eyebrow from "../ui/Eyebrow";
 import { Link } from "react-router-dom";
 import Check from "../assets/icons/check-circle.svg";
@@ -11,7 +11,7 @@ const PricingPlan = ({ mode }) => {
   const [selectedPlan, setSelectedPlan] = useState({});
 
   const tabs = ["One phase", "Two Phase", "Three Phase", "Instant Funding"];
-  const Pricedata = [
+  const Pricedata = useMemo(() => [
     { amount: "$5K", fee: "$49", target: "$500", maxDrawdown: "8%" },
     { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
     { amount: "$15K", fee: "$149", target: "$1,500", maxDrawdown: "10%" },
@@ -20,7 +20,7 @@ const PricingPlan = ({ mode }) => {
     { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%" },
     { amount: "$200K", fee: "$899", target: "$20,000", maxDrawdown: "14%" },
     { amount: "$400K", fee: "$1,499", target: "$40,000", maxDrawdown: "14%" },
-  ];
+  ],[]);
 
   const Btmtabs = [
     { name: "Phase 1" },
@@ -51,7 +51,7 @@ const PricingPlan = ({ mode }) => {
   useEffect(() => {
     const plan = Pricedata.find((p) => p.amount === selectedTabData);
     setSelectedPlan(plan || {});
-  }, [selectedTabData]);
+  }, [selectedTabData, Pricedata]);
   return (
     <section
       className="py-[120px] bg-cover bg-no-repeat bg-center max-xl:py-20"
