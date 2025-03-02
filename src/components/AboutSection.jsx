@@ -5,7 +5,7 @@ import Rocket from "../assets/icons/rocket-icon.svg";
 import HeadPhone from "../assets/icons/headphones.svg";
 import ArrowRight from "../assets/icons/arrow-right.svg";
 import Button from "../ui/Button";
-import { motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 const aboutCards = [
   {
@@ -47,7 +47,7 @@ const AboutSection = ({ mode }) => {
               mode === "dark" ? "text-white" : "text-dark1f"
             }`}
           >
-            Why Trade with <span className={`${mode === "dark" ? "text-primary" : "text-dark1f"}`}>A</span>EON?
+            Why Trade with <span><span className={`${mode === "dark" ? "text-primary" : "text-dark1f"}`}>A</span>EON?</span>
           </h2>
           <p
             className={`text-sm leading-[1.71] max-w-[450px] mx-auto mt-[10px] ${
@@ -63,7 +63,8 @@ const AboutSection = ({ mode }) => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ y: -20 }} // Moves the card up on hover
+              transition={{ duration: 0.5, delay: index * 0.3 }}
               viewport={{ once: true }}
               className={`p-[10px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.06)] shadow-card-inset ${
                 mode === "dark" ? "bg-black" : "bg-[#F1F1F1]"

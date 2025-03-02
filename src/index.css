@@ -18,6 +18,8 @@ body {
   line-height: normal;
   font-weight: normal;
   transition: all 0.3s ease-in-out;
+  background: #000;
+  color: #fff;
 }
 body.dark {
   background: #000;
