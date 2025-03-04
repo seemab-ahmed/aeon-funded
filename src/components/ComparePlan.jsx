@@ -5,14 +5,12 @@ import Check from "../assets/icons/check-circle.svg";
 
 const ComparePlan = ({ mode }) => {
   const planData = [
-    { title: "Profit Target", value: "6-8%" },
-    { title: "Drawdown Type", value: "Balance Based" },
-    { title: "Free Education", value: "Yes" },
-    { title: "Min Trading days", value: "0 Min Trading days" },
-    { title: "Scaling Plan", value: "95% Profit Split" },
-    { title: "Payouts", value: "Every 8 Days (Plus)" },
-    { title: "100k Evaluation", value: "$399" }
-  ];
+    { title: "Profit Target", value: "8-4%", others: "10-5%" },
+    { title: "Max total drawdown", value: "up to 12%", others: "10%" },
+    { title: "Scaling Plan", value: "95% Profit Split", others: "80% Profit Split" },
+    { title: "First Payout", value: "7 Days (Add on)", others: "14-30 Days" },
+    { title: "100k Evaluation", value: "$449", others: "~$500" }
+];
 
   return (
     <motion.section
@@ -164,7 +162,7 @@ const PlanCard = ({ data, mode }) => {
                   mode === "dark" ? "text-ivoryTint" : "text-dark1f"
                 }`}
               >
-                {item.value}
+                {item.others}
               </span>
             </div>
           )}

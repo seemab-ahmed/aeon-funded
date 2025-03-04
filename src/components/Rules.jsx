@@ -17,7 +17,7 @@ const rulesData = [
     title: "Profit Target",
     bodyClass: "px-6 max-lg:w-full",
     description:
-      "The Profit Target denotes the mandatory profit level that must be achieved during either Phase 1 (8%) or Phase 2 (5%) of the Challenge.",
+      "The Profit Target denotes the mandatory profit level that must be achieved during either Phase 1 (8%) or Phase 2 (4%) of the Challenge.",
     image: ProfitTarget,
     spanClass: "col-span-6 max-md:col-span-12",
     layoutClass: "flex flex-col justify-between pt-6",
@@ -67,7 +67,7 @@ const rulesData = [
     title: "Refundable Fee",
     bodyClass: "px-6 max-lg:w-full",
     description:
-      "100% of your challenge fee is refunded with your first payout after successfully passing both phases.",
+      "100% of your challenge fee is refundable after 3rd payout",
     image: RefFee,
     spanClass: "col-span-6 max-md:col-span-12",
     layoutClass: "flex flex-col justify-between py-6",

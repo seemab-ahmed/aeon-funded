@@ -14,9 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 const successData = [
   {
     eybrowText: "Total Payouts",
-    title: 1240000,
+    title: 280,
     prefix: "$",
-    suffix: "+",
+    suffix: "k+",
     bodyClass: "px-6 max-lg:w-full",
     description:
       "The total amount of money paid out to traders over time, showcasing overall earnings.",
@@ -31,8 +31,9 @@ const successData = [
   },
   {
     eybrowText: "Highest Paid Trader",
-    title: 18821,
+    title: 13,
     prefix: "$",
+    suffix: "k",
     description:
       "The trader with the highest earnings, setting a benchmark for success.",
     image: PaidChart,
@@ -40,8 +41,8 @@ const successData = [
   },
   {
     eybrowText: "Traders Worldwide",
-    title: 18000,
-    suffix: "+",
+    title: 4,
+    suffix: "k+",
     description:
       "The total number of active traders across different countries, highlighting global reach.",
     image: World,

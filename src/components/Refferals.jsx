@@ -59,7 +59,7 @@ const Refferals = ({ mode }) => {
     { title: "Referrals", count: 17 },
     { title: "Customers", count: 42 },
     { title: "Clicks", count: 42 },
-    { title: "Unique Earnings", count: 7200, prefix: "$" },
+    { title: "", count: 7200, prefix: "$" },
   ];
 
 

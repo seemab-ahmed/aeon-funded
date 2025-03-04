@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import HowitWorksPage from "./pages/HowitWorksPage";
 import Affiliate from "./pages/Affiliate";
 import Payouts from "./pages/Payouts";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
 
 const AppRoutes = ({ mode }) => {
   const { pathname } = useLocation();
@@ -19,6 +22,9 @@ const AppRoutes = ({ mode }) => {
       <Route path="/how-it-works" element={<HowitWorksPage mode={mode} />} />
       <Route path="/affiliate-program" element={<Affiliate mode={mode} />} />
       <Route path="/payouts" element={<Payouts mode={mode} />} />
+      <Route path="/terms" element={<TermsAndConditions mode={mode} />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy mode={mode} />} />
+      <Route path="/refund-policy" element={<RefundPolicy mode={mode} />} />
     </Routes>
   );
 };

@@ -70,7 +70,7 @@ const OneStep = ({ mode }) => {
               mode === "dark" ? "text-white" : "text-dark1f"
             }`}
           >
-            One-Step Express Rules
+            One step profit target: 8%
           </h2>
           <p
             className={`text-sm leading-[1.71] max-w-[350px] mx-auto mt-[10px] ${

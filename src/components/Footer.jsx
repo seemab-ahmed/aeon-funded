@@ -9,15 +9,14 @@ import Powered from '../assets/icons/powered.svg';
 import Propicks from '../assets/icons/propicks.svg';
 
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaYoutube, FaTelegramPlane } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaDiscord } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 
 const socialLinks = [
-  { icon: <FaInstagram />, link: 'https://instagram.com' },
-  { icon: <FaFacebookF />, link: 'https://facebook.com' },
-  { icon: <FaYoutube />, link: 'https://youtube.com' },
-  { icon: <FaTelegramPlane />, link: 'https://telegram.org' },
-  { icon: <BsTwitterX />, link: 'https://twitter.com' },
+  { icon: <FaInstagram />, link: 'https://www.instagram.com/aeonfunded' },
+  { icon: <FaFacebookF />, link: 'https://www.facebook.com/profile.php?id=61573703901801' },
+  { icon: <FaDiscord />, link: 'https://discord.gg/6QfJng6pfs' },
+  { icon: <BsTwitterX />, link: 'https://twitter.com/aeonfunded' },
 ];
 
 const navLinks = [
@@ -26,6 +25,11 @@ const navLinks = [
   { name: 'How It Works', path: '/how-it-works' },
   { name: 'Affiliate Program', path: '/affiliate-program' },
   { name: 'FAQ', path: 'http://Help.Aeonfunded.com' , target: '_blank' },
+];
+const policyLinks = [
+  { name: 'Terms and Conditions', path: '/terms' },
+  { name: 'Privacy Policy', path: '/privacy-policy' },
+  { name: 'Refund Policy', path: '/refund-policy' },
 ];
 
 const Footer = ({ mode }) => {
@@ -96,7 +100,22 @@ const Footer = ({ mode }) => {
             </li>
           ))}
         </ul>
-
+        <ul className="flex items-center my-8 gap-[10px] justify-center max-md:flex-col">
+  {policyLinks.map((nav, index) => (
+    <li key={index}>
+      <Link
+        to={nav.path}
+        target={nav.target}
+        onClick={(e) => handleNavClick(e, nav.path)}
+        className={`font-inter opacity-80 p-[10px] max-md:py-0 text-sm ${
+          mode === "dark" ? "text-ivoryTint" : "text-dark1f"
+        }`}
+      >
+        {nav.name}
+      </Link>
+    </li>
+  ))}
+</ul>
         <span
           className={`text-base font-inter text-center block opacity-80 ${
             mode === "dark" ? "text-ivoryTint" : "text-dark1f"
@@ -105,9 +124,9 @@ const Footer = ({ mode }) => {
           © 2025 AeonFunded. All rights reserved.
         </span>
       </div>
-        <div className="flex gap-1.5 items-center absolute right-[5%] bottom-[10%] z-10 max-md:relative max-md:mx-auto max-md:mt-2 max-md:justify-center max-md:inset-0">
-          <img src={Powered} alt="powered" className={`max-xl:max-w-[150px] max-lg:max-w-[100px] ${mode==="dark" ? "" :"filter invert"}`} />
-          <img src={Propicks} alt="propicks" className={`max-lg:max-w-[30px]`} />
+        <div className=" hidden lg:flex gap-1.5 items-center absolute right-[5%] bottom-[10%] z-10 max-md:relative max-md:mx-auto max-md:mt-2 max-md:justify-center max-md:inset-0">
+          <img src={Powered} alt="powered" className={`max-w-[90px] ${mode==="dark" ? "" :"filter invert"}`} />
+          <img src={Propicks} alt="propicks" className={`max-w-[25px]`} />
         </div>
 
       {/* Footer Backgrounds */}

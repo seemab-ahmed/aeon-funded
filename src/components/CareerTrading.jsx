@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Eyebrow from "../ui/Eyebrow";
@@ -17,15 +17,42 @@ const containerVariants = {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.8, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
 const CareerTrading = ({ mode }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  const [progress, setProgress] = useState(7.8);
+  const [accountSize, setAccountSize] = useState(200000);
+  const [animate, setAnimate] = useState(true);
+
+  // Turn off the animation after the initial count up duration
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimate(false);
+    }, 4000); // 4 seconds matching the CountUp duration
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleIncrement = () => {
+    setAccountSize((prev) => prev + 1); // Increase by 1000 (adjust as needed)
+  };
+
+  const handleDecrement = () => {
+    setAccountSize((prev) => (prev - 1 < 0 ? 0 : prev - 1)); // Decrease by 1000 (min: 0)
+  };
+
+  // Update progress based on click position
+  const handleProgressClick = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    const newProgress = (clickX / rect.width) * 100;
+    setProgress(newProgress);
+  };
 
   return (
     <section
@@ -62,13 +89,15 @@ const CareerTrading = ({ mode }) => {
               <div className="flex items-center justify-between w-full font-inter">
                 <h3 className="text-2xl font-semibold">Account Size</h3>
               </div>
+
               <div
                 className={`w-full flex justify-between items-center gap-3 p-4 rounded-[10px] border border-[rgba(255,255,255,0.10)] ${
                   mode === "dark" ? "bg-[rgba(5,5,5,0.40)]" : "bg-[#F1F1F1]"
                 }`}
               >
                 <div
-                  className={`pb-2 text-[30px] leading-none flex items-center justify-center rounded-full w-[40px] h-[40px] ${
+                  onClick={handleIncrement}
+                  className={`pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] ${
                     mode === "dark"
                       ? "shadow-icon-white bg-[rgba(255,204,0,0.04)]"
                       : "shadow-icon-light bg-white"
@@ -79,18 +108,30 @@ const CareerTrading = ({ mode }) => {
                 <div className="flex flex-col items-center">
                   <span
                     className={`text-sm mb-3 block ${
-                      mode === "dark" ? "text-ivoryTint opacity-60" : "text-dark1f"
+                      mode === "dark"
+                        ? "text-ivoryTint opacity-60"
+                        : "text-dark1f"
                     }`}
                   >
                     Account Size
                   </span>
                   <span className="text-[20px] leading-tight font-semibold">
                     $
-                    <CountUp end={"200000"} duration={4} separator="," />
+                    {animate ? (
+                      <CountUp
+                        start={0}
+                        end={accountSize}
+                        duration={4}
+                        separator=","
+                      />
+                    ) : (
+                      accountSize.toLocaleString()
+                    )}
                   </span>
                 </div>
                 <div
-                  className={`pb-2 text-[30px] leading-none flex items-center justify-center rounded-full w-[40px] h-[40px] ${
+                  onClick={handleDecrement}
+                  className={`pb-2 text-[30px] leading-none flex items-center justify-center cursor-pointer rounded-full w-[40px] h-[40px] ${
                     mode === "dark"
                       ? "shadow-icon-white bg-[rgba(255,204,0,0.04)]"
                       : "shadow-icon-light bg-white"
@@ -106,12 +147,46 @@ const CareerTrading = ({ mode }) => {
               >
                 <span
                   className={`text-sm mb-3 block ${
-                    mode === "dark" ? "text-ivoryTint opacity-60" : "text-dark1f"
+                    mode === "dark"
+                      ? "text-ivoryTint opacity-60"
+                      : "text-dark1f"
                   }`}
                 >
                   Profit Rate
                 </span>
                 <div
+                  onClick={handleProgressClick}
+                  className={`cursor-pointer rounded-[100px] ${
+                    mode === "dark"
+                      ? "bg-[rgba(255,255,255,0.10)]"
+                      : "bg-[rgba(31,31,31,0.10)]"
+                  } h-[6px] mt-2.5`}
+                >
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: inView ? `${progress}%` : "0%" }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    className={`h-full rounded-[100px] relative ${
+                      mode === "dark" ? "bg-[#fc0]" : "bg-dark1f"
+                    }`}
+                  >
+                    <div
+                      className={`h-2.5 w-2.5 absolute right-0 top-[-2px] rounded-[100px] ${
+                        mode === "dark" ? "bg-[#fc0]" : "bg-dark1f"
+                      }`}
+                    ></div>
+                    <span
+                      className={`absolute right-[-10%] top-[-20px] text-[6px] p-[2px_4px] font-bold rounded-[100px] ${
+                        mode === "dark"
+                          ? "bg-[#fc0] text-dark1f"
+                          : "bg-dark1f text-white"
+                      }`}
+                    >
+                      {progress.toFixed(1)}%
+                    </span>
+                  </motion.div>
+                </div>
+                {/* <div
                   className={`rounded-[100px] ${
                     mode === "dark"
                       ? "bg-[rgba(255,255,255,0.10)]"
@@ -139,7 +214,7 @@ const CareerTrading = ({ mode }) => {
                       7.5%
                     </span>
                   </motion.div>
-                </div>
+                </div> */}
               </div>
               <div
                 className={`p-4 w-full rounded-[10px] border border-[rgba(255,255,255,0.10)] ${
@@ -148,14 +223,17 @@ const CareerTrading = ({ mode }) => {
               >
                 <span
                   className={`text-sm mb-3 block ${
-                    mode === "dark" ? "text-ivoryTint opacity-80" : "text-dark1f"
+                    mode === "dark"
+                      ? "text-ivoryTint opacity-80"
+                      : "text-dark1f"
                   }`}
                 >
                   Take Home
                 </span>
                 <span className="text-[20px] leading-tight font-semibold">
                   $
-                  <CountUp end={"200000"} duration={4} separator="," />/Month
+                  <CountUp end={"200000"} duration={4} separator="," />
+                  /Month
                 </span>
               </div>
               <div className="absolute top-[-1px] right-0 left-0 mx-auto w-[60%] h-[1px] bg-card-line"></div>

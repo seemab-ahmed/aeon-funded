@@ -131,7 +131,7 @@ const Statistics = ({ mode }) => {
           {[
             { icon: Dimond, value: 223322, label: "Total Lot Size" },
             { icon: Check, value: "GBPJPY", label: "Most Traded Pair" },
-            { icon: Globe, value: 120, label: "No. of Funded Traders" },
+            { icon: Globe, value: 120, label: "Supported country" },
           ].map((stat, index) => (
             <motion.div
               key={index}

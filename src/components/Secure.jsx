@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Eyebrow from "../ui/Eyebrow";
 import Verified from "../assets/images/verified.svg";
-import Payouts from "../assets/images/payout-img.webp";
+import Payouts from "../assets/images/payout-img.svg";
 import ArrowRight from "../assets/icons/arrow-right.svg";
 import Button from "../ui/Button";
 
