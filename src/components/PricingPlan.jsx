@@ -20,7 +20,7 @@ const pricingData = {
         { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$299", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%" },
+        { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%", popular: "Popular"},
         { amount: "$200K", fee: "$899", target: "$20,000", maxDrawdown: "14%" },
       ],
       description: "Two-phase, two-step challenge to test your trading skill.",
@@ -89,7 +89,7 @@ const pricingData = {
         { amount: "$10K", fee: "$100", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$200", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$300", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$500", target: "$10,000", maxDrawdown: "12%" },
+        { amount: "$100K", fee: "$500", target: "$10,000", maxDrawdown: "12%", popular: "Popular" },
         { amount: "$200K", fee: "$900", target: "$20,000", maxDrawdown: "14%" },
       ],
       description:
@@ -153,83 +153,87 @@ const pricingData = {
           ],
         ]
     },
-    "Plus": {
-      pricingOptions: [
-        { amount: "$5K", fee: "$84", target: "$500", maxDrawdown: "8%" },
-        { amount: "$10K", fee: "$119", target: "$1,000", maxDrawdown: "8%" },
-        { amount: "$25K", fee: "$219", target: "$2,500", maxDrawdown: "10%" },
-        { amount: "$50K", fee: "$314", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$549", target: "$10,000", maxDrawdown: "12%" },
-        {
-          amount: "$200K",
-          fee: "$1,098",
-          target: "$20,000",
-          maxDrawdown: "14%",
-        },
-      ],
-      description:
-        "Exclusive trading plan with higher flexibility and benefits.",
-        addons: [
-          [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
+    // "Plus": {
+    //   pricingOptions: [
+    //     { amount: "$5K", fee: "$84", target: "$500", maxDrawdown: "8%" },
+    //     { amount: "$10K", fee: "$119", target: "$1,000", maxDrawdown: "8%" },
+    //     { amount: "$25K", fee: "$219", target: "$2,500", maxDrawdown: "10%" },
+    //     { amount: "$50K", fee: "$314", target: "$5,000", maxDrawdown: "12%" },
+    //     { amount: "$100K", fee: "$549", target: "$10,000", maxDrawdown: "12%" , popular: "Popular" },
+    //     {
+    //       amount: "$200K",
+    //       fee: "$1,098",
+    //       target: "$20,000",
+    //       maxDrawdown: "14%",
+    //     },
+    //   ],
+    //   description:
+    //     "Exclusive trading plan with higher flexibility and benefits.",
+    //     addons: [
+    //       [
+    //         {
+    //           icon: Check,
+    //           title: "Minimum Trading Days",
+    //           value: "3 Days",
               
-            },
-            { icon: Check, title: "Profit target", value: "8%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-            { icon: Check, title: "Reset discount", value: "20%" },
-          ],
-          [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
+    //         },
+    //         { icon: Check, title: "Profit target", value: "8%" },
+    //         { icon: Check, title: "Max daily loss", value: "5%" },
+    //         {
+    //           icon: Check,
+    //           title: "Max loss",
+    //           value: "10%",
+    //         },
+    //         { icon: Check, title: "Levrage", value: "1:100" },
+    //         { icon: Check, title: "Trade Throught News", value: "No" },
+    //         { icon: Check, title: "Profit split", value: "80%" },
+    //         { icon: Check, title: "Reset discount", value: "20%" },
+    //       ],
+    //       [
+    //         {
+    //           icon: Check,
+    //           title: "Minimum Trading Days",
+    //           value: "3 Days",
               
-            },
-            { icon: Check, title: "Profit target", value: "4%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-          ],
-          [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
+    //         },
+    //         { icon: Check, title: "Profit target", value: "4%" },
+    //         { icon: Check, title: "Max daily loss", value: "5%" },
+    //         {
+    //           icon: Check,
+    //           title: "Max loss",
+    //           value: "10%",
+    //         },
+    //         { icon: Check, title: "Levrage", value: "1:100" },
+    //         { icon: Check, title: "Trade Throught News", value: "No" },
+    //         { icon: Check, title: "Profit split", value: "80%" },
+    //       ],
+    //       [
+    //         {
+    //           icon: Check,
+    //           title: "Minimum Trading Days",
+    //           value: "3 Days",
               
-            },
-            { icon: Check, title: "Profit target", value: "8%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-            { icon: Check, title: "First reward", value: "7 trading days then Bi-weekly" }, 
-          ],
-        ]    
-    },
+    //         },
+    //         { icon: Check, title: "Profit target", value: "8%" },
+    //         { icon: Check, title: "Max daily loss", value: "5%" },
+    //         {
+    //           icon: Check,
+    //           title: "Max loss",
+    //           value: "10%",
+    //         },
+    //         { icon: Check, title: "Levrage", value: "1:100" },
+    //         { icon: Check, title: "Trade Throught News", value: "No" },
+    //         { icon: Check, title: "Profit split", value: "80%" },
+    //         { icon: Check, title: "First reward", value: "7 trading days then Bi-weekly" }, 
+    //       ],
+    //     ]    
+    // },
   },
 };
+const pricingCategory = [
+  "Classic", "Overclock", "Strike"
+]
+
 
 // Animation Variants
 const containerVariants = {
@@ -260,7 +264,7 @@ const cardVariants = {
 const PricingPlan = ({ mode }) => {
   const [selectedAmount, setSelectedAmount] = useState("$5K");
   const [activeTab, setActiveTab] = useState("One Phase");
-  // const [category, setcategory] = useState("One Phase");
+  const [category, setCategory] = useState("Classic");
 
   const plan = pricingData.plans[activeTab];
   const selectedPlan = plan.pricingOptions.find(
@@ -280,7 +284,7 @@ const PricingPlan = ({ mode }) => {
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
     >
-      <div className="container max-w-[900px]">
+      <div className="container max-w-[920px]">
         <motion.div
           className="text-center flex items-center flex-col"
           variants={fadeInUp}
@@ -323,11 +327,33 @@ const PricingPlan = ({ mode }) => {
               onClick={() => setActiveTab(tab)}
               variants={popIn}
             >
-              {tab}
+              {tab} 
             </motion.button>
           ))}
         </motion.div>
-
+        <motion.div
+      className="flex gap-5 mb-10 justify-center max-md:flex-col"
+      variants={fadeInUp}
+    >
+      {pricingCategory.map((tab) => (
+        <motion.button
+          key={tab}
+          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold max-md:w-full ${
+            category === tab
+              ? mode === "dark"
+                ? "bg-white text-black"
+                : "bg-dark1f text-white"
+              : mode === "dark"
+              ? "text-white bg-transparent"
+              : "text-dark1f"
+          }`}
+          onClick={() => setCategory(tab)}
+          variants={popIn}
+        >
+          {tab}
+        </motion.button>
+      ))}
+    </motion.div>
         <div
           className={`p-[10px] rounded-[24px] border border-[rgba(255,255,255,0.05)] shadow-card-inset ${
             mode === "dark" ? "bg-[#050505]" : "bg-[#F1F1F1]"
@@ -346,7 +372,7 @@ const PricingPlan = ({ mode }) => {
               {plan.pricingOptions.map((item, index) => (
                 <motion.button
                   key={index}
-                  className={`rounded-[100px] p-[10px] cursor-pointer border ${
+                  className={`rounded-[100px] p-[10px] cursor-pointer border flex items-center justify-center gap-2.5 ${
                     selectedAmount === item.amount
                       ? mode === "dark"
                         ? " border-[rgba(255,204,0,0.10)] bg-[rgba(255,204,0,0.10)] text-primary shadow-[0px_4px_10px_0px_rgba(0,0,0,0.00)_inset]"
@@ -357,6 +383,12 @@ const PricingPlan = ({ mode }) => {
                   variants={popIn}
                 >
                   {item.amount}
+                   
+              {item.popular && (
+              <span className={`text-[12px] font-inter relative h-[26px] max-w-max flex items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${mode === 'dark' ? 'text-ivoryTint bg-[#FCF0F01A]' : 'text-dark1f bg-[#F1F1F1]'}`}>
+                      {item.popular}
+                    </span>
+              )}
                 </motion.button>
               ))}
             </motion.div>
