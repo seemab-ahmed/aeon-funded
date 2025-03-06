@@ -26,9 +26,22 @@ const fadeInUp = {
 
 const CareerTrading = ({ mode }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  // progress now represents the profit rate in percentage
   const [progress, setProgress] = useState(7.8);
+  // accountSize will be controlled by both plus/minus and the slider
   const [accountSize, setAccountSize] = useState(200000);
   const [animate, setAnimate] = useState(true);
+
+  // A constant factor to tie profit rate to account size so that:
+  // accountSize = profitRate * factor. With initial values: 200000 = 7.8 * factor.
+  const factor = 200000 / 7.8;
+
+  // Define filled and track colors (using the old color scheme)
+  const filledColor = mode === "dark" ? "#fc0" : "#1f1f1f";
+  const trackColor =
+    mode === "dark"
+      ? "rgba(255,255,255,0.10)"
+      : "rgba(31,31,31,0.10)";
 
   // Turn off the animation after the initial count up duration
   useEffect(() => {
@@ -38,20 +51,33 @@ const CareerTrading = ({ mode }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleSliderChange = (event) => {
+    const newProgress = parseFloat(event.target.value);
+    setProgress(newProgress);
+    setAccountSize(Math.round(newProgress * factor));
+  };
+
   const handleIncrement = () => {
-    setAccountSize((prev) => prev + 1); // Increase by 1000 (adjust as needed)
+    setAccountSize((prev) => {
+      const newSize = prev + 1; // Increase by 1 (as per current logic)
+      setProgress(newSize / factor);
+      return newSize;
+    });
   };
 
   const handleDecrement = () => {
-    setAccountSize((prev) => (prev - 1 < 0 ? 0 : prev - 1)); // Decrease by 1000 (min: 0)
+    setAccountSize((prev) => {
+      const newSize = prev - 1 < 0 ? 0 : prev - 1;
+      setProgress(newSize / factor);
+      return newSize;
+    });
   };
 
-  // Update progress based on click position
-  const handleProgressClick = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const newProgress = (clickX / rect.width) * 100;
-    setProgress(newProgress);
+  // Compute slider background style for filled portion
+  const sliderBackground = {
+    background: `linear-gradient(to right, ${filledColor} 0%, ${filledColor} ${
+      (progress / 15) * 100
+    }%, ${trackColor} ${(progress / 15) * 100}%, ${trackColor} 100%)`,
   };
 
   return (
@@ -141,7 +167,7 @@ const CareerTrading = ({ mode }) => {
                 </div>
               </div>
               <div
-                className={` w-full p-4 rounded-[10px] border border-[rgba(255,255,255,0.10)] ${
+                className={`w-full p-4 rounded-[10px] border border-[rgba(255,255,255,0.10)] ${
                   mode === "dark" ? "bg-[rgba(5,5,5,0.40)]" : "bg-[#F1F1F1]"
                 }`}
               >
@@ -154,67 +180,37 @@ const CareerTrading = ({ mode }) => {
                 >
                   Profit Rate
                 </span>
-                <div
-                  onClick={handleProgressClick}
-                  className={`cursor-pointer rounded-[100px] ${
-                    mode === "dark"
-                      ? "bg-[rgba(255,255,255,0.10)]"
-                      : "bg-[rgba(31,31,31,0.10)]"
-                  } h-[6px] mt-2.5`}
-                >
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: inView ? `${progress}%` : "0%" }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                    className={`h-full rounded-[100px] relative ${
-                      mode === "dark" ? "bg-[#fc0]" : "bg-dark1f"
-                    }`}
+                {/* Slider with filled background and label positioned above the thumb */}
+                <div className="relative mt-2.5">
+                  {/* Label above the slider thumb */}
+                  <span
+                    style={{
+                      position: "absolute",
+                      left: `${(progress / 15) * 100}%`,
+                      top: "-20px",
+                      transform: "translateX(-50%)",
+                      fontSize: "6px",
+                      padding: "2px 4px",
+                    }}
+                    className={
+                      mode === "dark"
+                        ? "bg-[#fc0] text-dark1f font-bold rounded-full"
+                        : "bg-dark1f text-white font-bold rounded-full"
+                    }
                   >
-                    <div
-                      className={`h-2.5 w-2.5 absolute right-0 top-[-2px] rounded-[100px] ${
-                        mode === "dark" ? "bg-[#fc0]" : "bg-dark1f"
-                      }`}
-                    ></div>
-                    <span
-                      className={`absolute right-[-10%] top-[-20px] text-[6px] p-[2px_4px] font-bold rounded-[100px] ${
-                        mode === "dark"
-                          ? "bg-[#fc0] text-dark1f"
-                          : "bg-dark1f text-white"
-                      }`}
-                    >
-                      {progress.toFixed(1)}%
-                    </span>
-                  </motion.div>
+                    {progress.toFixed(1)}%
+                  </span>
+                  <input
+                    type="range"
+                    min="0"
+                    max="15"
+                    step="0.1"
+                    value={progress}
+                    onChange={handleSliderChange}
+                    className="w-full h-[6px] appearance-none rounded-[100px] cursor-pointer"
+                    style={sliderBackground}
+                  />
                 </div>
-                {/* <div
-                  className={`rounded-[100px] ${
-                    mode === "dark"
-                      ? "bg-[rgba(255,255,255,0.10)]"
-                      : "bg-[rgba(31,31,31,0.10)]"
-                  } h-[6px] mt-2.5`}
-                >
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: inView ? "20%" : "0%" }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                    className={`h-full rounded-[100px] relative ${
-                      mode === "dark" ? "bg-[#fc0]" : "bg-dark1f "
-                    }`}
-                  >
-                    <div
-                      className={`h-2.5 w-2.5 absolute right-0 top-[-2px] rounded-[100px] ${
-                        mode === "dark" ? "bg-[#fc0]" : "bg-dark1f"
-                      }`}
-                    ></div>
-                    <span
-                      className={`absolute right-[-10%] top-[-20px] text-[6px] p-[2px_4px] font-bold rounded-[100px] ${
-                        mode === "dark" ? "bg-[#fc0] text-dark1f" : "bg-dark1f text-white"
-                      }`}
-                    >
-                      7.5%
-                    </span>
-                  </motion.div>
-                </div> */}
               </div>
               <div
                 className={`p-4 w-full rounded-[10px] border border-[rgba(255,255,255,0.10)] ${
@@ -276,6 +272,26 @@ const CareerTrading = ({ mode }) => {
           </motion.div>
         </motion.div>
       </div>
+      {/* Slider Thumb Styles */}
+      <style jsx>{`
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: ${filledColor};
+          cursor: pointer;
+          margin-top: -2px;
+        }
+        input[type="range"]::-moz-range-thumb {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: ${filledColor};
+          cursor: pointer;
+        }
+      `}</style>
     </section>
   );
 };

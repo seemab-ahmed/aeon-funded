@@ -7,7 +7,7 @@ const ComparePlan = ({ mode }) => {
   const planData = [
     { title: "Profit Target", value: "8-4%", others: "10-5%" },
     { title: "Max total drawdown", value: "up to 12%", others: "10%" },
-    { title: "Scaling Plan", value: "95% Profit Split", others: "80% Profit Split" },
+    { title: "Rewards Plan", value: "95% Profit Split", others: "80% Profit Split" },
     { title: "First Payout", value: "7 Days (Add on)", others: "14-30 Days" },
     { title: "100k Evaluation", value: "$449", others: "~$500" }
 ];

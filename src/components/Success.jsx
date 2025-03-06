@@ -7,6 +7,7 @@ import Eyebrow from "../ui/Eyebrow";
 import SccessBg from "../assets/images/success-bg.webp";
 import Payout from "../assets/images/payout-chart.svg";
 import PaidChart from "../assets/images/bar-chart.svg";
+import PaidChartLight from "../assets/images/bar-chart-light.svg";
 import World from "../assets/images/world.svg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -37,6 +38,7 @@ const successData = [
     description:
       "The trader with the highest earnings, setting a benchmark for success.",
     image: PaidChart,
+    lightimage: PaidChartLight,
     layoutClass: "grid lg:grid-cols-[1fr_0.5fr] p-8",
   },
   {
@@ -119,28 +121,79 @@ const Success = ({ mode }) => {
   );
 };
 
-const SuccessCard = ({ eybrowText, title, suffix, prefix, bodyClass, description, extraInfo, image, spanClass, imageClass, layoutClass, mode }) => {
+const SuccessCard = ({
+  eybrowText,
+  title,
+  suffix,
+  prefix,
+  bodyClass,
+  description,
+  extraInfo,
+  image,
+  lightimage, // Destructure the light image
+  spanClass,
+  imageClass,
+  layoutClass,
+  mode,
+}) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+
+  // Use lightimage in light mode if provided, otherwise fallback to image.
+  const imgSrc = mode === "light" && lightimage ? lightimage : image;
+  // Apply filter in light mode only if there is no lightimage.
+  const imgFilter =
+    mode === "dark" ? "" : mode === "light" && lightimage ? "" : "filter grayscale invert";
 
   return (
     <div
       ref={ref}
-      className={`success-card p-[10px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.06)] shadow-card-inset hover:shadow transition-all duration-500 ease-in-out ${spanClass || ""} ${mode === "dark" ? "bg-black" : "bg-[#F1F1F1]"}`}
+      className={`success-card p-[10px] rounded-[24px] border border-solid border-[rgba(255,255,255,0.06)] shadow-card-inset hover:shadow transition-all duration-500 ease-in-out ${
+        spanClass || ""
+      } ${mode === "dark" ? "bg-black" : "bg-[#F1F1F1]"}`}
     >
-      <div className={`relative h-full rounded-[18px] border border-solid border-[rgba(255,255,255,0.10)] ${layoutClass} gap-5 items-center overflow-hidden ${mode === "dark" ? "bg-card-radial" : "bg-white"}`} style={{ backdropFilter: "blur(7.5px)" }}>
+      <div
+        className={`relative h-full rounded-[18px] border border-solid border-[rgba(255,255,255,0.10)] ${layoutClass} gap-5 items-center overflow-hidden ${
+          mode === "dark" ? "bg-card-radial" : "bg-white"
+        }`}
+        style={{ backdropFilter: "blur(7.5px)" }}
+      >
         <div className={`${bodyClass}`}>
-          <div className={`relative h-7 max-w-max flex items-center justify-center gap-2 rounded-[100px] py-2 px-[10px] border border-solid border-[rgba(255,255,255,0.20)] ${mode === "dark" ? "text-ivoryTint shadow-nav-shadow bg-[rgba(255,255,255,0.01)]" : "text-black bg-[#F1F1F1]"}`}> <span className="text-[10px] font-inter font-medium">{eybrowText}</span></div>
-          <h4 className={`text-[50px] leading-tight font-semibold font-inter mt-4 mb-[10px] max-lg:text-4xl ${mode === "dark" ? "text-white" : "text-dark1f"}`}>
+          <div
+            className={`relative h-7 max-w-max flex items-center justify-center gap-2 rounded-[100px] py-2 px-[10px] border border-solid border-[rgba(255,255,255,0.20)] ${
+              mode === "dark"
+                ? "text-ivoryTint shadow-nav-shadow bg-[rgba(255,255,255,0.01)]"
+                : "text-black bg-[#F1F1F1]"
+            }`}
+          >
+            <span className="text-[10px] font-inter font-medium">{eybrowText}</span>
+          </div>
+          <h4
+            className={`text-[50px] leading-tight font-semibold font-inter mt-4 mb-[10px] max-lg:text-4xl ${
+              mode === "dark" ? "text-white" : "text-dark1f"
+            }`}
+          >
             {prefix}
             {inView && <CountUp end={title} duration={4} separator="," />}
             {suffix}
           </h4>
-          <p className={`text-sm leading-[1.7] font-inter ${mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"}`}>{description}</p>
+          <p
+            className={`text-sm leading-[1.7] font-inter ${
+              mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
+            }`}
+          >
+            {description}
+          </p>
         </div>
-        <img src={image} alt="Success" loading="lazy" className={`${imageClass} || ${mode === "dark" ? "" : "filter grayscale invert"} w-full h-auto max-h-[234px]`} />
+        <img
+          src={imgSrc}
+          alt="Success"
+          loading="lazy"
+          className={`${imageClass} ${imgFilter} w-full h-auto max-h-[234px]`}
+        />
       </div>
     </div>
   );
 };
+
 
 export default Success;

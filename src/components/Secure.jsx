@@ -129,20 +129,22 @@ const Secure = ({ mode }) => {
                 mode === "dark" ? "bg-card-radial" : "bg-white"
               }`}
             >
-              <h4
-                className={`text-2xl font-semibold mt-4 mb-[10px] ${
-                  mode === "dark" ? "text-white" : "text-dark1f"
-                }`}
-              >
-                Fast Reliable Payouts
-              </h4>
-              <p
-                className={`text-sm max-w-[420px] mx-auto ${
-                  mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
-                }`}
-              >
-                The total amount of money paid out to traders over time, showcasing overall earnings.
-              </p>
+              <div className="max-lg:mb-6">
+                <h4
+                  className={`text-2xl font-semibold mt-4 mb-[10px] ${
+                    mode === "dark" ? "text-white" : "text-dark1f"
+                  }`}
+                >
+                  Fast Reliable Payouts
+                </h4>
+                <p
+                  className={`text-sm max-w-[420px] mx-auto ${
+                    mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
+                  }`}
+                >
+                  The total amount of money paid out to traders over time, showcasing overall earnings.
+                </p>
+              </div>
               <img
                 src={Payouts}
                 alt="Illustration of secure payouts"

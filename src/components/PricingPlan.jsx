@@ -14,7 +14,7 @@ const planDetailsTwo = [
 
 const pricingData = {
   plans: {
-    "One Phase": {
+    "1 step": {
       pricingOptions: [
         { amount: "$5K", fee: "$49", target: "$500", maxDrawdown: "8%" },
         { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
@@ -83,7 +83,7 @@ const pricingData = {
         ],
       ]
     },
-    "Two Phase": {
+    "2 step": {
       pricingOptions: [
         { amount: "$5K", fee: "$50", target: "$500", maxDrawdown: "8%" },
         { amount: "$10K", fee: "$100", target: "$1,000", maxDrawdown: "8%" },
@@ -263,7 +263,7 @@ const cardVariants = {
 
 const PricingPlan = ({ mode }) => {
   const [selectedAmount, setSelectedAmount] = useState("$5K");
-  const [activeTab, setActiveTab] = useState("One Phase");
+  const [activeTab, setActiveTab] = useState("1 step");
   const [category, setCategory] = useState("Classic");
 
   const plan = pricingData.plans[activeTab];
@@ -309,13 +309,16 @@ const PricingPlan = ({ mode }) => {
         </motion.div>
 
         <motion.div
-          className="flex gap-5 mt-[60px] mb-10 justify-center max-md:flex-col"
+          className="flex gap-5 mt-[60px] mb-10 justify-center max-md:flex-wrap"
           variants={fadeInUp}
         >
           {Object.keys(pricingData.plans).map((tab) => (
             <motion.button
               key={tab}
-              className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold max-md:w-full ${
+              className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
+                transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold 
+                max-md:px-4 max-md:h-10
+                 ${
                 activeTab === tab
                   ? mode === "dark"
                     ? "bg-white text-black"
@@ -332,13 +335,15 @@ const PricingPlan = ({ mode }) => {
           ))}
         </motion.div>
         <motion.div
-      className="flex gap-5 mb-10 justify-center max-md:flex-col"
+      className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
       variants={fadeInUp}
     >
       {pricingCategory.map((tab) => (
         <motion.button
           key={tab}
-          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold max-md:w-full ${
+          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
+            transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold
+            max-md:px-4 max-md:h-10  ${
             category === tab
               ? mode === "dark"
                 ? "bg-white text-black"
@@ -408,7 +413,7 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid grid-cols-3 gap-2.5`}
+            className={`grid grid-cols-1 lg:grid-cols-3 gap-2.5`}
           >
             {
               plan.addons.map((item)=><PlanCard data={item} mode={mode} />)
@@ -418,7 +423,8 @@ const PricingPlan = ({ mode }) => {
           <motion.div variants={fadeInUp} className={`my-5`}>
             <Link
               to="/"
-              className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 flex items-center justify-center gap-2 ${
+              className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
+                flex items-center justify-center gap-2 max-md:px-4 ${
                 mode === "dark"
                   ? "bg-[#fc0] bg-opacity-40 text-white"
                   : " bg-white text-dark1f"
@@ -444,13 +450,13 @@ const PricingPlan = ({ mode }) => {
   viewport={{ once: true, amount: 0.2 }}
 >
   <motion.div
-    className="flex items-center justify-between pb-5 pt-10 border-b border-dashed border-[rgba(226,234,253,0.10)]"
+    className="flex flex-wrap items-center justify-between md:pb-5 md:pt-10 border-b border-dashed border-[rgba(226,234,253,0.10)] max-md:gap-0"
     variants={fadeInUp}
   >
     {planDetailsTwo.map((item, index) => (
       <motion.div
         key={index}
-        className="flex items-center justify-between border-[rgba(226,234,253,0.10)]"
+        className="flex items-center justify-between max-md:border-b max-md:border-dashed border-[rgba(226,234,253,0.10)] max-md:py-5 max-md:w-full"
         variants={fadeInUp}
       >
         <div className="flex items-center gap-[10px]">
