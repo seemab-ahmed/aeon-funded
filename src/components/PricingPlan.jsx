@@ -390,7 +390,7 @@ const PricingPlan = ({ mode }) => {
                   {item.amount}
                    
               {item.popular && (
-              <span className={`text-[12px] font-inter relative h-[26px] max-w-max flex items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${mode === 'dark' ? 'text-ivoryTint bg-[#FCF0F01A]' : 'text-dark1f bg-[#F1F1F1]'}`}>
+              <span className={`hidden lg:flex text-[12px] font-inter relative h-[26px] max-w-max items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${mode === 'dark' ? 'text-ivoryTint bg-[#FCF0F01A]' : 'text-dark1f bg-[#F1F1F1]'}`}>
                       {item.popular}
                     </span>
               )}
