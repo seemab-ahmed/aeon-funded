@@ -47,7 +47,7 @@ const rulesData = [
     title: "Min Trading Days",
     bodyClass: "px-6 max-lg:w-full",
     description:
-      "Complete at least one trade on 5 different days (non-consecutive).",
+      "Complete at least one trade on 3 days (non-consecutive).",
     image: MinTrading,
     spanClass: "col-span-7 max-md:col-span-12",
     layoutClass: "flex flex-col justify-between py-6",

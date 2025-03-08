@@ -6,6 +6,7 @@ import BrandLight from "../assets/images/brand-light.svg";
 const Header = ({ mode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { pathname, hash } = useLocation();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -16,6 +17,21 @@ const Header = ({ mode }) => {
     { name: "FAQ", path: "http://Help.Aeonfunded.com", target: "_blank" },
   ];
 
+
+  const isActiveLink = (itemPath) => {
+    // External links are not active.
+    if (itemPath.startsWith("http")) return false;
+  
+    // Split the link into its base path and hash.
+    const [basePath, itemHash] = itemPath.split("#");
+  
+    // If the link has a hash, check if both pathname and hash match.
+    if (itemHash) {
+      return pathname === basePath && hash === `#${itemHash}`;
+    }
+    // For links without a hash, only mark as active if there's no hash in the current location.
+    return pathname === itemPath && hash === "";
+  };
   // Helper to handle smooth scrolling when a link contains a hash.
   const handleLinkClick = (path) => {
     setMenuOpen(false);
@@ -92,20 +108,29 @@ const Header = ({ mode }) => {
             `}
           >
             <ul className="flex flex-col lg:flex-row items-center justify-between gap-[30px] max-xl:gap-5">
-              {navLinks.map((item, index) => (
+              {navLinks.map((item, index) => {
+              const active = isActiveLink(item.path);
+              return (
+
                 <li key={index}>
                   <Link
                     to={item.path}
                     target={item.target}
                     className={`text-sm xl:text-base leading-normal font-normal font-inter transition-all duration-300 ease-in-out ${
-                      mode === "dark" ? "text-white hover:text-primary" : "text-dark1f"
+                      mode === "dark"
+                          ? active
+                            ? "text-primary"
+                            : "text-white hover:text-primary"
+                          : active
+                          ? "text-primary"
+                          : "text-dark1f hover:text-primary"
                     }`}
                     onClick={() => handleLinkClick(item.path)}
                   >
                     {item.name}
                   </Link>
                 </li>
-              ))}
+              )})}
             </ul>
             <div className="hidden max-lg:flex max-lg:flex-col mt-4 justify-center lg:flex-row items-center gap-[14px]">
               <Link

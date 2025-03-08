@@ -20,7 +20,7 @@ const pricingData = {
         { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$299", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%", popular: "Popular"},
+        { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%", popular: "popular"},
         { amount: "$200K", fee: "$899", target: "$20,000", maxDrawdown: "14%" },
       ],
       description: "Two-phase, two-step challenge to test your trading skill.",
@@ -400,7 +400,7 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid grid-cols-3 text-center  border-opacity-5 p-7
+            className={`grid grid-cols-3 text-center  border-opacity-5 py-7
           ${
             mode === "dark"
               ? "text-[#FBF6EC] bg-[#050505] border-white"
