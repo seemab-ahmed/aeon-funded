@@ -39,7 +39,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Welcome to the digital ecosystem of Aeon Analytics FZ-LLC, accessible via [insert URL]
+          Welcome to the digital ecosystem of Aeon Analytics FZ-LLC, accessible via <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
           (hereinafter referred to as the “Company”). The Company operates an array of online
           services, resources, and interactive features (collectively, the “Platform”), all of which
           are provided by Aeon Analytics FZ-LLC. Your interaction with the Platform is contingent

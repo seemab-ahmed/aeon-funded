@@ -426,7 +426,7 @@ const PricingPlan = ({ mode }) => {
               className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
                 flex items-center justify-center gap-2 max-md:px-4 ${
                 mode === "dark"
-                  ? "bg-[#fc0] bg-opacity-40 text-white"
+                  ? "bg-[#FFD221] text-black"
                   : " bg-white text-dark1f"
               }`}
             >
@@ -435,7 +435,7 @@ const PricingPlan = ({ mode }) => {
                 {selectedPlan.fee}{" "}
               </span>
               <span className={`text-sm font-normal leading-none opacity-80 `}>
-                one time fee
+                one time fee <span className="w-12"></span>
               </span>
             </Link>
           </motion.div>

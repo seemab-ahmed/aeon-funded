@@ -28,7 +28,7 @@ const PrivacyPolicy = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Welcome to Aeon Analytics FZ-LLC (“we,” “us,” or the “Company”), accessible at [insert URL]
+          Welcome to Aeon Analytics FZ-LLC (“we,” “us,” or the “Company”), accessible at <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
           (the “Platform”). We are committed to protecting your privacy and ensuring the security of your
           personal information. This Privacy Policy outlines how we collect, use, store, and safeguard
           your data when you interact with our Platform and services (collectively, the “Services”). By
@@ -228,7 +228,7 @@ const PrivacyPolicy = ({ mode }) => {
             <strong>Communications:</strong> Opt out of promotional emails by following the unsubscribe instructions in those messages; essential account-related notices will still be sent.
           </li>
           <li>
-            <strong>Access and Correction:</strong> You may request access to or corrections of your personal data by reaching out to us at support@aeonfunded.com.
+            <strong>Access and Correction:</strong> You may request access to or corrections of your personal data by reaching out to us at <a href="mailto:support@aeonfunded.com" className=' text-primary list-none'>support@aeonfunded.com</a>.
           </li>
           <li>
             <strong>Deletion:</strong> You can request the removal of your data, though we may retain certain information as required by law or for legitimate business purposes (e.g., record-keeping).
@@ -398,16 +398,16 @@ const PrivacyPolicy = ({ mode }) => {
             </ul>
           </li>
           <li>
-            <strong>Exercising Your Rights:</strong> Submit requests to our Data Protection Officer (DPO) at dpo@aeonfunded.com. We will respond within one month, extendable by two months for complex requests, and will not charge a fee unless requests are excessive or unfounded.
+            <strong>Exercising Your Rights:</strong> Submit requests to our Data Protection Officer (DPO) at <a href="mailto:dpo@aeonfunded.com" className=' text-primary list-none'>dpo@aeonfunded.com</a>. We will respond within one month, extendable by two months for complex requests, and will not charge a fee unless requests are excessive or unfounded.
           </li>
           <li>
             <strong>Data Transfers Outside the EEA:</strong> When transferring your data outside the EEA (e.g., to our servers in UAE), we rely on Standard Contractual Clauses or other approved mechanisms to ensure equivalent protection, as mandated by GDPR.
           </li>
           <li>
-            <strong>Data Protection Officer (DPO):</strong> For GDPR-related inquiries or complaints, contact our DPO at dpo@aeonfunded.com. The DPO oversees our compliance and serves as your point of contact.
+            <strong>Data Protection Officer (DPO):</strong> For GDPR-related inquiries or complaints, contact our DPO at <a href="mailto:dpo@aeonfunded.com" className=' text-primary list-none'>dpo@aeonfunded.com</a>. The DPO oversees our compliance and serves as your point of contact.
           </li>
           <li>
-            <strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local data protection authority in the EEA if you believe we have not handled your data appropriately. Contact details for authorities are available at <a href="https://www.edpb.europa.eu/edpb_en" target="_blank" rel="noopener noreferrer">https://www.edpb.europa.eu/edpb_en</a>.
+            <strong>Supervisory Authority:</strong> You have the right to lodge a complaint with your local data protection authority in the EEA if you believe we have not handled your data appropriately. Contact details for authorities are available at <a href="https://www.edpb.europa.eu/edpb_en" target="_blank" rel="noopener noreferrer" >https://www.edpb.europa.eu/edpb_en</a>.
           </li>
           <li>
             <strong>Automated Decision-Making:</strong> We do not use automated decision-making or profiling that produces legal effects or significantly affects you, except for trading activity monitoring to enforce our Terms, where human oversight is maintained.
@@ -431,11 +431,11 @@ const PrivacyPolicy = ({ mode }) => {
           <br /><br />
           Aeon Analytics FZ-LLC
           <br />
-          Email: support@aeonfunded.com
+          Email: <a href="mailto:support@aeonfunded.com" className=' text-primary list-none'>support@aeonfunded.com</a>
           <br />
           Address: The Meydan Road, Al Sheba, PO Box 95195, Dubai, United Arab Emirates
           <br /><br />
-          For GDPR inquiries: Data Protection Officer dpo@aeonfunded.com
+          For GDPR inquiries: Data Protection Officer  <a href="mailto:dpo@aeonfunded.com" className=' text-primary list-none'>dpo@aeonfunded.com</a>
         </p>
       </div>
     </section>

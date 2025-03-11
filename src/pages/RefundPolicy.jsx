@@ -28,7 +28,7 @@ const RefundPolicy = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          At Aeon Analytics FZ-LLC (“we,” “us,” or the “Company”), accessible at [insert URL] (the “Platform”), we strive to deliver high-quality digital services through our simulated trading evaluation programs (the “Services”). This Refund Policy explains our approach to refunds and cancellations, reflecting the nature of our offerings as digital products. Please read this policy carefully before purchasing or engaging with our Services, as it forms part of our Terms and Conditions.
+          At Aeon Analytics FZ-LLC (“we,” “us,” or the “Company”), accessible at <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" sclassName=' text-primary font-bold'> AeonFunded.com </a> {" "} (the “Platform”), we strive to deliver high-quality digital services through our simulated trading evaluation programs (the “Services”). This Refund Policy explains our approach to refunds and cancellations, reflecting the nature of our offerings as digital products. Please read this policy carefully before purchasing or engaging with our Services, as it forms part of our Terms and Conditions.
         </p>
 
         {/* Section 1: No Refunds for Digital Products */}
