@@ -32,7 +32,7 @@ const successData = [
   },
   {
     eybrowText: "Highest Paid Trader",
-    title: 13,
+    title: 24,
     prefix: "$",
     suffix: "k",
     description:

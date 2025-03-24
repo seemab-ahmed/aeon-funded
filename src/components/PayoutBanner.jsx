@@ -12,20 +12,20 @@ const payoutCards = [
   {
     index: 1,
     icon: Chart,
-    title: "Highest Payout Ever",
+    title: "Highest Payout 24k",
     description: "Trade with our capital without being liable for any losses.",
   },
   {
     index: 2,
     icon: Notepad,
-    title: "Last Month Payout",
+    title: "Last Month Payout: 67k",
     description:
       "Receive Payouts with a High Profit Split, Protected by our Payout Guarantee.",
   },
   {
     index: 3,
     icon: Deal,
-    title: "Total Funded Traders",
+    title: "Total Funded: around 600",
     description: "Our Dedicated Support team is always here to help.",
   },
 ];

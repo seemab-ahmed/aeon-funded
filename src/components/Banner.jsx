@@ -42,11 +42,13 @@ const Banner = ({ mode }) => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col items-start"
           >
+            <a href="https://www.trustpilot.com/review/aeonfunded.com" target="_blank" rel="noreferrer noopener">
             <Eyebrow
               imageSrc={Star}
-              text="Rated 10/10 From 800+ Users"
+              text="Rated 5/5 on trust pilot"
               theme={`${mode === "dark" ? "golden" : "light"}`}
             />
+            </a>
             <h1
               className={`text-[80px] font-semibold leading-[1.12] tracking-[-1.6px] max-xl:text-[56px] max-lg:text-4xl ${
                 mode === "dark" ? "text-white" : "text-dark1f"

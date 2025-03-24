@@ -411,6 +411,25 @@ const PricingPlan = ({ mode }) => {
             <span className="font-medium font-inter text-sm">Phase 2</span>
             <span className="font-medium font-inter text-sm">Funded</span>
           </motion.div>
+          <motion.div variants={fadeInUp} className={`my-5 block lg:hidden`}>
+            <Link
+              to="/"
+              className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
+                flex items-center justify-center gap-2 max-md:px-4 ${
+                mode === "dark"
+                  ? "bg-[#FFD221] text-black"
+                  : " bg-white text-dark1f"
+              }`}
+            >
+              Start trading now
+              <span className={`text-[32px] leading-none font-semibold `}>
+                {selectedPlan.fee}{" "}
+              </span>
+              <span className={`text-sm font-normal leading-none opacity-80 `}>
+                one time fee <span className="w-12"></span>
+              </span>
+            </Link>
+          </motion.div>
           <motion.div
             variants={fadeInUp}
             className={`grid grid-cols-1 lg:grid-cols-3 gap-2.5`}
@@ -420,7 +439,7 @@ const PricingPlan = ({ mode }) => {
             }
             
           </motion.div>
-          <motion.div variants={fadeInUp} className={`my-5`}>
+          <motion.div variants={fadeInUp} className={`my-5 hidden lg:block`}>
             <Link
               to="/"
               className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
