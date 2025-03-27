@@ -3,8 +3,8 @@ import Texture from "../assets/images/footer-texture.svg";
 import TextureBlack from "../assets/images/texture-black.svg";
 import FooterGradient from '../assets/images/footer-gradient.svg';
 import Line from '../assets/images/line.svg';
-import FooterBrand from '../assets/images/brand.svg';
-import FooterbrandLight from '../assets/images/brand-light.svg';
+import FooterBrand from '../assets/images/brand-new.svg';
+import FooterbrandLight from '../assets/images/brand-new-light.svg';
 import Powered from '../assets/icons/powered.svg';
 import Propicks from '../assets/icons/propicks.svg';
 

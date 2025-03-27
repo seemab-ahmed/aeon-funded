@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Brand from "../assets/images/brand.svg";
-import BrandLight from "../assets/images/brand-light.svg";
+import Brand from "../assets/images/brand-new.svg";
+import BrandLight from "../assets/images/brand-new-light.svg";
 
 const Header = ({ mode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,19 +58,19 @@ const Header = ({ mode }) => {
           {/* Brand */}
           <Link
             to="/"
-            className="max-w-[134px] h-16 flex items-center transition-all duration-200 ease-in-out relative"
+            className="max-w-[134px] flex items-center transition-all duration-200 ease-in-out relative"
           >
             <img
               src={Brand}
               alt="Aeon Funding Brand"
               loading="lazy"
-              className={`${mode === "dark" ? "opacity-100" : "opacity-0"}`}
+              className={`w-full ${mode === "dark" ? "opacity-100" : "opacity-0"}`}
             />
             <img
               src={BrandLight}
               alt="Aeon Funding Brand"
               loading="lazy"
-              className={`absolute inset-0 ${
+              className={`w-full h-full absolute inset-0 ${
                 mode === "dark" ? "opacity-0" : "opacity-100"
               }`}
             />
