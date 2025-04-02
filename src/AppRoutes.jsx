@@ -7,6 +7,7 @@ import Payouts from "./pages/Payouts";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
+import AMLRedirect from "./pages/AMLRedirect";
 
 const AppRoutes = ({ mode }) => {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ const AppRoutes = ({ mode }) => {
       <Route path="/terms" element={<TermsAndConditions mode={mode} />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy mode={mode} />} />
       <Route path="/refund-policy" element={<RefundPolicy mode={mode} />} />
+      <Route path="/aml" element={<AMLRedirect mode={mode} />} />
     </Routes>
   );
 };
