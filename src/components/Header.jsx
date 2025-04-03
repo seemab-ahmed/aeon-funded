@@ -101,7 +101,7 @@ const Header = ({ mode }) => {
           <nav
             className={`
               ${mode === "dark" ? "max-lg:bg-black shadow-nav-shadow" : "max-lg:bg-[#e5e7eb]"}
-              max-w-[666px] rounded-[100px] p-[17px_30px] bg-[rgba(18,18,18,0.10)]
+              max-w-[740px] rounded-[100px] p-[17px_30px] bg-[rgba(18,18,18,0.10)]
               max-xl:max-w-[580px] max-xl:p-[14px_24px] max-lg:overflow-hidden 
               max-lg:absolute top-[80px] left-0 right-0 max-lg:max-w-full max-lg:w-[90%] max-lg:mx-auto
               max-lg:rounded-lg transition-all ease-in-out duration-500 backdrop:blur-lg z-[20] lg:z-auto  
