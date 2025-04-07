@@ -231,7 +231,7 @@ const pricingData = {
   },
 };
 const pricingCategory = [
-  "Classic", "Overclock", "Strike"
+  "One Phase", "Two Phase", "Instant"
 ]
 
 
@@ -264,7 +264,7 @@ const cardVariants = {
 const PricingPlan = ({ mode }) => {
   const [selectedAmount, setSelectedAmount] = useState("$5K");
   const [activeTab, setActiveTab] = useState("1 step");
-  const [category, setCategory] = useState("Classic");
+  const [category, setCategory] = useState("One Phase");
 
   const plan = pricingData.plans[activeTab];
   const selectedPlan = plan.pricingOptions.find(
@@ -398,7 +398,7 @@ const PricingPlan = ({ mode }) => {
               ))}
             </motion.div>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             className={`grid grid-cols-3 text-center  border-opacity-5 py-7
           ${
@@ -410,7 +410,7 @@ const PricingPlan = ({ mode }) => {
             <span className="font-medium font-inter text-sm">Phase 1</span>
             <span className="font-medium font-inter text-sm">Phase 2</span>
             <span className="font-medium font-inter text-sm">Funded</span>
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={fadeInUp} className={`my-5 block lg:hidden`}>
             <Link
               to="/"
