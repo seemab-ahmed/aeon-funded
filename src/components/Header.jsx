@@ -14,7 +14,6 @@ const Header = ({ mode }) => {
     { name: "How it Works", path: "/how-it-works" },
     { name: "Payouts", path: "/payouts" },
     { name: "Affiliate Program", path: "/affiliate-program" },
-    { name: "Blog" , path: "http://blog.aeonfunded.com/" , target: "_blank" },
     { name: "FAQ", path: "http://Help.Aeonfunded.com", target: "_blank" },
   ];
 

@@ -24,6 +24,7 @@ const navLinks = [
   { name: 'Challenges', path: '/#plans' },
   { name: 'How It Works', path: '/how-it-works' },
   { name: 'Affiliate Program', path: '/affiliate-program' },
+  { name: "Blog" , path: "http://blog.aeonfunded.com/" , target: "_blank" },
   { name: 'FAQ', path: 'http://Help.Aeonfunded.com' , target: '_blank' },
 ];
 const policyLinks = [
@@ -123,6 +124,12 @@ const Footer = ({ mode }) => {
         >
           © 2025 AeonFunded. All rights reserved.
         </span>
+
+        <p className={` py-8 text-base font-inter text-center block opacity-80 ${
+            mode === "dark" ? "text-ivoryTint" : "text-dark1f"
+          }`}>
+      Aeon Funded L.L.C. FZ is not a financial broker, financial advisor, or financial representative. The company does not accept client deposits or provide access to live trading environments. All trading activities, profits, and losses occur within a simulated environment and do not involve real money. Aeon Funded L.L.C. FZ does not conduct any regulated financial services. Participation is for educational and entertainment purposes only. Please refer to our Terms of Use for full details.
+      </p>
       </div>
         <div className=" hidden lg:flex gap-1.5 items-center absolute right-[5%] bottom-[10%] z-10 max-md:relative max-md:mx-auto max-md:mt-2 max-md:justify-center max-md:inset-0">
           <img src={Powered} alt="powered" className={`max-w-[90px] ${mode==="dark" ? "" :"filter invert"}`} />
@@ -146,6 +153,7 @@ const Footer = ({ mode }) => {
           className="w-full h-full object-cover object-bottom"
         />
       </div>
+      
     </footer>
   );
 };

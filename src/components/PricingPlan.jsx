@@ -14,7 +14,7 @@ const planDetailsTwo = [
 
 const pricingData = {
   plans: {
-    "1 step": {
+    "Classic": {
       pricingOptions: [
         { amount: "$5K", fee: "$49", target: "$500", maxDrawdown: "8%" },
         { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
@@ -83,7 +83,7 @@ const pricingData = {
         ],
       ]
     },
-    "2 step": {
+    "Plus": {
       pricingOptions: [
         { amount: "$5K", fee: "$50", target: "$500", maxDrawdown: "8%" },
         { amount: "$10K", fee: "$100", target: "$1,000", maxDrawdown: "8%" },
@@ -153,81 +153,6 @@ const pricingData = {
           ],
         ]
     },
-    // "Plus": {
-    //   pricingOptions: [
-    //     { amount: "$5K", fee: "$84", target: "$500", maxDrawdown: "8%" },
-    //     { amount: "$10K", fee: "$119", target: "$1,000", maxDrawdown: "8%" },
-    //     { amount: "$25K", fee: "$219", target: "$2,500", maxDrawdown: "10%" },
-    //     { amount: "$50K", fee: "$314", target: "$5,000", maxDrawdown: "12%" },
-    //     { amount: "$100K", fee: "$549", target: "$10,000", maxDrawdown: "12%" , popular: "Popular" },
-    //     {
-    //       amount: "$200K",
-    //       fee: "$1,098",
-    //       target: "$20,000",
-    //       maxDrawdown: "14%",
-    //     },
-    //   ],
-    //   description:
-    //     "Exclusive trading plan with higher flexibility and benefits.",
-    //     addons: [
-    //       [
-    //         {
-    //           icon: Check,
-    //           title: "Minimum Trading Days",
-    //           value: "3 Days",
-              
-    //         },
-    //         { icon: Check, title: "Profit target", value: "8%" },
-    //         { icon: Check, title: "Max daily loss", value: "5%" },
-    //         {
-    //           icon: Check,
-    //           title: "Max loss",
-    //           value: "10%",
-    //         },
-    //         { icon: Check, title: "Levrage", value: "1:100" },
-    //         { icon: Check, title: "Trade Throught News", value: "No" },
-    //         { icon: Check, title: "Profit split", value: "80%" },
-    //         { icon: Check, title: "Reset discount", value: "20%" },
-    //       ],
-    //       [
-    //         {
-    //           icon: Check,
-    //           title: "Minimum Trading Days",
-    //           value: "3 Days",
-              
-    //         },
-    //         { icon: Check, title: "Profit target", value: "4%" },
-    //         { icon: Check, title: "Max daily loss", value: "5%" },
-    //         {
-    //           icon: Check,
-    //           title: "Max loss",
-    //           value: "10%",
-    //         },
-    //         { icon: Check, title: "Levrage", value: "1:100" },
-    //         { icon: Check, title: "Trade Throught News", value: "No" },
-    //         { icon: Check, title: "Profit split", value: "80%" },
-    //       ],
-    //       [
-    //         {
-    //           icon: Check,
-    //           title: "Minimum Trading Days",
-    //           value: "3 Days",
-              
-    //         },
-    //         { icon: Check, title: "Profit target", value: "8%" },
-    //         { icon: Check, title: "Max daily loss", value: "5%" },
-    //         {
-    //           icon: Check,
-    //           title: "Max loss",
-    //           value: "10%",
-    //         },
-    //         { icon: Check, title: "Levrage", value: "1:100" },
-    //         { icon: Check, title: "Trade Throught News", value: "No" },
-    //         { icon: Check, title: "Profit split", value: "80%" },
-    //         { icon: Check, title: "First reward", value: "7 trading days then Bi-weekly" }, 
-    //       ],
-    //     ]    
-    // },
   },
 };
 const pricingCategory = [
@@ -263,7 +188,7 @@ const cardVariants = {
 
 const PricingPlan = ({ mode }) => {
   const [selectedAmount, setSelectedAmount] = useState("$5K");
-  const [activeTab, setActiveTab] = useState("1 step");
+  const [activeTab, setActiveTab] = useState("Classic");
   const [category, setCategory] = useState("One Phase");
 
   const plan = pricingData.plans[activeTab];
@@ -309,7 +234,32 @@ const PricingPlan = ({ mode }) => {
         </motion.div>
 
         <motion.div
-          className="flex gap-5 mt-[60px] mb-10 justify-center max-md:flex-wrap"
+      className="flex mt-[60px] gap-5 mb-10 justify-center max-md:flex-wrap"
+      variants={fadeInUp}
+    >
+      {pricingCategory.map((tab) => (
+        <motion.button
+          key={tab}
+          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
+            transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold
+            max-md:px-4 max-md:h-10  ${
+            category === tab
+              ? mode === "dark"
+                ? "bg-white text-black"
+                : "bg-dark1f text-white"
+              : mode === "dark"
+              ? "text-white bg-transparent"
+              : "text-dark1f"
+          }`}
+          onClick={() => setCategory(tab)}
+          variants={popIn}
+        >
+          {tab}
+        </motion.button>
+      ))}
+    </motion.div>
+        <motion.div
+          className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
           variants={fadeInUp}
         >
           {Object.keys(pricingData.plans).map((tab) => (
@@ -334,31 +284,7 @@ const PricingPlan = ({ mode }) => {
             </motion.button>
           ))}
         </motion.div>
-        <motion.div
-      className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
-      variants={fadeInUp}
-    >
-      {pricingCategory.map((tab) => (
-        <motion.button
-          key={tab}
-          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
-            transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold
-            max-md:px-4 max-md:h-10  ${
-            category === tab
-              ? mode === "dark"
-                ? "bg-white text-black"
-                : "bg-dark1f text-white"
-              : mode === "dark"
-              ? "text-white bg-transparent"
-              : "text-dark1f"
-          }`}
-          onClick={() => setCategory(tab)}
-          variants={popIn}
-        >
-          {tab}
-        </motion.button>
-      ))}
-    </motion.div>
+       
         <div
           className={`p-[10px] rounded-[24px] border border-[rgba(255,255,255,0.05)] shadow-card-inset ${
             mode === "dark" ? "bg-[#050505]" : "bg-[#F1F1F1]"
