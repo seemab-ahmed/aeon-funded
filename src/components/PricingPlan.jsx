@@ -13,152 +13,324 @@ const planDetailsTwo = [
 ];
 
 const pricingData = {
-  plans: {
-    "Classic": {
+  "One Phase": {
+    Classic: {
       pricingOptions: [
-        { amount: "$5K", fee: "$49", target: "$500", maxDrawdown: "8%" },
-        { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
-        { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
-        { amount: "$50K", fee: "$299", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$499", target: "$10,000", maxDrawdown: "12%", popular: "popular"},
-        { amount: "$200K", fee: "$899", target: "$20,000", maxDrawdown: "14%" },
+        { amount: "$5K", fee: "$69", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$119", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$219", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$379", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$519",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "popular",
+        },
+        {
+          amount: "$200K",
+          fee: "$1,019",
+          target: "$20,000",
+          maxDrawdown: "14%",
+        },
       ],
       description: "Two-phase, two-step challenge to test your trading skill.",
       addons: [
         [
-          {
-            icon: Check,
-            title: "Minimum Trading Days",
-            value: "3 Days",
-            
-          },
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
           { icon: Check, title: "Profit target", value: "8%" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
-          {
-            icon: Check,
-            title: "Max loss",
-            value: "10%",
-          },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
           { icon: Check, title: "Levrage", value: "1:100" },
           { icon: Check, title: "Trade Throught News", value: "No" },
           { icon: Check, title: "Profit split", value: "80%" },
-          { icon: Check, title: "Reset discount", value: "20%" },
+          { icon: Check, title: "Reset discount", value: "10%" },
         ],
         [
-          {
-            icon: Check,
-            title: "Minimum Trading Days",
-            value: "3 Days",
-            
-          },
-          { icon: Check, title: "Profit target", value: "4%" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
-          {
-            icon: Check,
-            title: "Max loss",
-            value: "10%",
-          },
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "No" },
-          { icon: Check, title: "Profit split", value: "80%" },
-        ],
-        [
-          {
-            icon: Check,
-            title: "Minimum Trading Days",
-            value: "3 Days",
-            
-          },
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
           { icon: Check, title: "Profit target", value: "8%" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
-          {
-            icon: Check,
-            title: "Max loss",
-            value: "10%",
-          },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
           { icon: Check, title: "Levrage", value: "1:100" },
           { icon: Check, title: "Trade Throught News", value: "No" },
           { icon: Check, title: "Profit split", value: "80%" },
-          { icon: Check, title: "First reward", value: "7 trading days then Bi-weekly" }, 
+          { icon: Check, title: "Reset discount", value: "10%" },
+        ], [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "-" },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "No" },
+          { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
+          { icon: Check, title: "Reset discount", value: "10%" },
         ],
-      ]
+      ],
     },
-    "Plus": {
+    Plus: {
       pricingOptions: [
-        { amount: "$5K", fee: "$50", target: "$500", maxDrawdown: "8%" },
-        { amount: "$10K", fee: "$100", target: "$1,000", maxDrawdown: "8%" },
-        { amount: "$25K", fee: "$200", target: "$2,500", maxDrawdown: "10%" },
-        { amount: "$50K", fee: "$300", target: "$5,000", maxDrawdown: "12%" },
-        { amount: "$100K", fee: "$500", target: "$10,000", maxDrawdown: "12%", popular: "Popular" },
-        { amount: "$200K", fee: "$900", target: "$20,000", maxDrawdown: "14%" },
+        { amount: "$5K", fee: "$59", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$349", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$499",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "Popular",
+        },
+        { amount: "$200K", fee: "$999", target: "$20,000", maxDrawdown: "14%" },
       ],
       description:
         "Traditional two-step evaluation process for experienced traders.",
         addons: [
           [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
-              
-            },
-            { icon: Check, title: "Profit target", value: "8%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "10%" },
+            { icon: Check, title: "Max daily loss", value: "2%" },
+            { icon: Check, title: "Max loss", value: "8%"},
             { icon: Check, title: "Levrage", value: "1:100" },
             { icon: Check, title: "Trade Throught News", value: "No" },
             { icon: Check, title: "Profit split", value: "80%" },
+            { icon: Check, title: "Reset discount", value: "10%" },
+          ],
+          [
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "10%" },
+            { icon: Check, title: "Max daily loss", value: "2%" },
+            { icon: Check, title: "Max loss", value: "8%"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "No" },
+            { icon: Check, title: "Profit split", value: "80%" },
+            { icon: Check, title: "Reset discount", value: "10%" },
+          ], [
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "-" },
+            { icon: Check, title: "Max daily loss", value: "2%" },
+            { icon: Check, title: "Max loss", value: "8%"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "No" },
+            { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
+            { icon: Check, title: "Reset discount", value: "10%" },
+          ],
+        ],
+    },
+  },
+  "Two Phase": {
+    Classic: {
+      pricingOptions: [
+        { amount: "$5K", fee: "$49", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$349", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$499",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "popular",
+        },
+        { amount: "$200K", fee: "$999", target: "$20,000", maxDrawdown: "14%" },
+      ],
+      description: "Two-phase, two-step challenge to test your trading skill.",
+      addons: [
+        [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "8%" },
+          { icon: Check, title: "Max daily loss", value: "5%" },
+          { icon: Check, title: "Max loss", value: "8%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "allowed" },
+          { icon: Check, title: "Profit split", value: "-" },
+          { icon: Check, title: "Reset discount", value: "20%" },
+        ],
+        [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "5%" },
+          { icon: Check, title: "Max daily loss", value: "5%" },
+          { icon: Check, title: "Max loss", value: "8%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "allowed" },
+          { icon: Check, title: "Profit split", value: "-" },
+          { icon: Check, title: "Reset discount", value: "20%" },
+        ], [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "-" },
+          { icon: Check, title: "Max daily loss", value: "5%" },
+          { icon: Check, title: "Max loss", value: "10%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+          { icon: Check, title: "Profit split", value: "80 up to 95% (add on)" },
+          { icon: Check, title: "Reset discount", value: "20%" },
+        ],
+      ],
+    },
+    Plus: {
+      pricingOptions: [
+        { amount: "$5K", fee: "$99", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$149", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$299", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$449", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$599",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "Popular",
+        },
+        {
+          amount: "$200K",
+          fee: "$1,199",
+          target: "$20,000",
+          maxDrawdown: "14%",
+        },
+      ],
+      description:
+        "Traditional two-step evaluation process for experienced traders.",
+        addons: [
+          [
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "10%" },
+            { icon: Check, title: "Max daily loss", value: "5%" },
+            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "allowed" },
+            { icon: Check, title: "Profit split", value: "-" },
             { icon: Check, title: "Reset discount", value: "20%" },
           ],
           [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
-              
-            },
-            { icon: Check, title: "Profit target", value: "4%" },
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "5%" },
             { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
+            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
             { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
+            { icon: Check, title: "Trade Throught News", value: "allowed" },
+            { icon: Check, title: "Profit split", value: "-" },
+            { icon: Check, title: "Reset discount", value: "-" },
+          ], [
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "-" },
+            { icon: Check, title: "Max daily loss", value: "5%" },
+            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+            { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
+            { icon: Check, title: "Reset discount", value: "-" },
           ],
+        ],
+    },
+  },
+  Instant: {
+    Classic: {
+      pricingOptions: [
+        { amount: "$5K", fee: "$199", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$399", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$3999",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "popular",
+        },
+        {
+          amount: "$200K",
+          fee: "$7999",
+          target: "$20,000",
+          maxDrawdown: "14%",
+        },
+      ],
+      description: "Two-phase, two-step challenge to test your trading skill.",
+      addons: [
+        [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "-" },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+          { icon: Check, title: "Reset discount", value: "10%" },
+        ],
+        [
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "-" },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+          { icon: Check, title: "Reset discount", value: "10%" },
+        ],[
+          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+          { icon: Check, title: "Profit target", value: "-" },
+          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Max loss", value: "5%"},
+          { icon: Check, title: "Levrage", value: "1:100" },
+          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+          { icon: Check, title: "Reset discount", value: "10%" },
+        ],
+      ],
+    },
+    Plus: {
+      pricingOptions: [
+        { amount: "$5K", fee: "$199", target: "$500", maxDrawdown: "8%" },
+        { amount: "$10K", fee: "$399", target: "$1,000", maxDrawdown: "8%" },
+        { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
+        { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" },
+        {
+          amount: "$100K",
+          fee: "$3999",
+          target: "$10,000",
+          maxDrawdown: "12%",
+          popular: "popular",
+        },
+        {
+          amount: "$200K",
+          fee: "$7999",
+          target: "$20,000",
+          maxDrawdown: "14%",
+        },
+      ],
+      description:
+        "Traditional two-step evaluation process for experienced traders.",
+        addons: [
           [
-            {
-              icon: Check,
-              title: "Minimum Trading Days",
-              value: "3 Days",
-              
-            },
-            { icon: Check, title: "Profit target", value: "8%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            {
-              icon: Check,
-              title: "Max loss",
-              value: "10%",
-            },
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "-" },
+            { icon: Check, title: "Max daily loss", value: "3%" },
+            { icon: Check, title: "Max loss", value: "5%"},
             { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-            { icon: Check, title: "First reward", value: "7 trading days then Bi-weekly" }, 
+            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+            { icon: Check, title: "Reset discount", value: "10%" },
+          ],[
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "-" },
+            { icon: Check, title: "Max daily loss", value: "3%" },
+            { icon: Check, title: "Max loss", value: "5%"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+            { icon: Check, title: "Reset discount", value: "10%" },
+          ],[
+            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
+            { icon: Check, title: "Profit target", value: "-" },
+            { icon: Check, title: "Max daily loss", value: "3%" },
+            { icon: Check, title: "Max loss", value: "5%"},
+            { icon: Check, title: "Levrage", value: "1:100" },
+            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
+            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
+            { icon: Check, title: "Reset discount", value: "10%" },
           ],
-        ]
+        ],
     },
   },
 };
-const pricingCategory = [
-  "One Phase", "Two Phase", "Instant"
-]
-
+const pricingCategory = ["One Phase", "Two Phase", "Instant"];
 
 // Animation Variants
 const containerVariants = {
@@ -166,7 +338,7 @@ const containerVariants = {
   visible: {
     transition: {
       staggerChildren: 0.15,
-    },            
+    },
   },
 };
 
@@ -191,10 +363,12 @@ const PricingPlan = ({ mode }) => {
   const [activeTab, setActiveTab] = useState("Classic");
   const [category, setCategory] = useState("One Phase");
 
-  const plan = pricingData.plans[activeTab];
+  const plan = pricingData?.[category][activeTab];
   const selectedPlan = plan.pricingOptions.find(
     (option) => option.amount === selectedAmount
   );
+
+  const pricingTabs = pricingData?.[category];
 
   return (
     <motion.section
@@ -234,57 +408,57 @@ const PricingPlan = ({ mode }) => {
         </motion.div>
 
         <motion.div
-      className="flex mt-[60px] gap-5 mb-10 justify-center max-md:flex-wrap"
-      variants={fadeInUp}
-    >
-      {pricingCategory.map((tab) => (
-        <motion.button
-          key={tab}
-          className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
+          className="flex mt-[60px] gap-5 mb-10 justify-center max-md:flex-wrap"
+          variants={fadeInUp}
+        >
+          {pricingCategory.map((tab) => (
+            <motion.button
+              key={tab}
+              className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
             transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold
             max-md:px-4 max-md:h-10  ${
-            category === tab
-              ? mode === "dark"
-                ? "bg-white text-black"
-                : "bg-dark1f text-white"
-              : mode === "dark"
-              ? "text-white bg-transparent"
-              : "text-dark1f"
-          }`}
-          onClick={() => setCategory(tab)}
-          variants={popIn}
-        >
-          {tab}
-        </motion.button>
-      ))}
-    </motion.div>
+              category === tab
+                ? mode === "dark"
+                  ? "bg-white text-black"
+                  : "bg-dark1f text-white"
+                : mode === "dark"
+                ? "text-white bg-transparent"
+                : "text-dark1f"
+            }`}
+              onClick={() => setCategory(tab)}
+              variants={popIn}
+            >
+              {tab}
+            </motion.button>
+          ))}
+        </motion.div>
         <motion.div
           className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
           variants={fadeInUp}
         >
-          {Object.keys(pricingData.plans).map((tab) => (
+          {Object.keys(pricingTabs).map((tab) => (
             <motion.button
               key={tab}
               className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
                 transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold 
                 max-md:px-4 max-md:h-10
                  ${
-                activeTab === tab
-                  ? mode === "dark"
-                    ? "bg-white text-black"
-                    : "bg-dark1f text-white"
-                  : mode === "dark"
-                  ? "text-white bg-transparent"
-                  : "text-dark1f"
-              }`}
+                   activeTab === tab
+                     ? mode === "dark"
+                       ? "bg-white text-black"
+                       : "bg-dark1f text-white"
+                     : mode === "dark"
+                     ? "text-white bg-transparent"
+                     : "text-dark1f"
+                 }`}
               onClick={() => setActiveTab(tab)}
               variants={popIn}
             >
-              {tab} 
+              1 {tab}
             </motion.button>
           ))}
         </motion.div>
-       
+
         <div
           className={`p-[10px] rounded-[24px] border border-[rgba(255,255,255,0.05)] shadow-card-inset ${
             mode === "dark" ? "bg-[#050505]" : "bg-[#F1F1F1]"
@@ -314,17 +488,23 @@ const PricingPlan = ({ mode }) => {
                   variants={popIn}
                 >
                   {item.amount}
-                   
-              {item.popular && (
-              <span className={`hidden lg:flex text-[12px] font-inter relative h-[26px] max-w-max items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${mode === 'dark' ? 'text-ivoryTint bg-[#FCF0F01A]' : 'text-dark1f bg-[#F1F1F1]'}`}>
+
+                  {item.popular && (
+                    <span
+                      className={`hidden lg:flex text-[12px] font-inter relative h-[26px] max-w-max items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${
+                        mode === "dark"
+                          ? "text-ivoryTint bg-[#FCF0F01A]"
+                          : "text-dark1f bg-[#F1F1F1]"
+                      }`}
+                    >
                       {item.popular}
                     </span>
-              )}
+                  )}
                 </motion.button>
               ))}
             </motion.div>
           </motion.div>
-          {/* <motion.div
+          <motion.div
             variants={fadeInUp}
             className={`grid grid-cols-3 text-center  border-opacity-5 py-7
           ${
@@ -336,16 +516,16 @@ const PricingPlan = ({ mode }) => {
             <span className="font-medium font-inter text-sm">Phase 1</span>
             <span className="font-medium font-inter text-sm">Phase 2</span>
             <span className="font-medium font-inter text-sm">Funded</span>
-          </motion.div> */}
+          </motion.div>
           <motion.div variants={fadeInUp} className={`my-5 block lg:hidden`}>
             <Link
               to="/"
               className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
                 flex items-center justify-center gap-2 max-md:px-4 ${
-                mode === "dark"
-                  ? "bg-[#FFD221] text-black"
-                  : " bg-white text-dark1f"
-              }`}
+                  mode === "dark"
+                    ? "bg-[#FFD221] text-black"
+                    : " bg-white text-dark1f"
+                }`}
             >
               Start trading now
               <span className={`text-[32px] leading-none font-semibold `}>
@@ -360,20 +540,19 @@ const PricingPlan = ({ mode }) => {
             variants={fadeInUp}
             className={`grid grid-cols-1 lg:grid-cols-3 gap-2.5`}
           >
-            {
-              plan.addons.map((item)=><PlanCard data={item} mode={mode} />)
-            }
-            
+            {plan.addons.map((item) => (
+              <PlanCard data={item} mode={mode} />
+            ))}
           </motion.div>
           <motion.div variants={fadeInUp} className={`my-5 hidden lg:block`}>
             <Link
               to="/"
               className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
                 flex items-center justify-center gap-2 max-md:px-4 ${
-                mode === "dark"
-                  ? "bg-[#FFD221] text-black"
-                  : " bg-white text-dark1f"
-              }`}
+                  mode === "dark"
+                    ? "bg-[#FFD221] text-black"
+                    : " bg-white text-dark1f"
+                }`}
             >
               Start trading now
               <span className={`text-[32px] leading-none font-semibold `}>
@@ -385,39 +564,42 @@ const PricingPlan = ({ mode }) => {
             </Link>
           </motion.div>
           <motion.div
-  className={`font-inter font-semibold rounded-[20px] px-6 pb-6 border border-[rgba(255,255,255,0.10)] ${
-    mode === "dark" ? "text-white bg-plan-card" : "text-dark1f bg-[#F1F1F1]"
-  }`}
-  style={{ backdropFilter: "blur(7.5px)" }}
-  variants={cardVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.2 }}
->
-  <motion.div
-    className="flex flex-wrap items-center justify-between md:pb-5 md:pt-10 border-b border-dashed border-[rgba(226,234,253,0.10)] max-md:gap-0"
-    variants={fadeInUp}
-  >
-    {planDetailsTwo.map((item, index) => (
-      <motion.div
-        key={index}
-        className="flex items-center justify-between max-md:border-b max-md:border-dashed border-[rgba(226,234,253,0.10)] max-md:py-5 max-md:w-full"
-        variants={fadeInUp}
-      >
-        <div className="flex items-center gap-[10px]">
-          <img
-            src={item.icon}
-            alt={item.title}
-            loading="lazy"
-            className={`w-6 h-6 ${mode === "dark" ? "" : "filter invert grayscale"}`}
-          />
-          <span className="text-sm leading-none">{item.title}</span>
-        </div>
-      </motion.div>
-    ))}
-  </motion.div>
-</motion.div>
-
+            className={`font-inter font-semibold rounded-[20px] px-6 pb-6 border border-[rgba(255,255,255,0.10)] ${
+              mode === "dark"
+                ? "text-white bg-plan-card"
+                : "text-dark1f bg-[#F1F1F1]"
+            }`}
+            style={{ backdropFilter: "blur(7.5px)" }}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.div
+              className="flex flex-wrap items-center justify-between md:pb-5 md:pt-10 border-b border-dashed border-[rgba(226,234,253,0.10)] max-md:gap-0"
+              variants={fadeInUp}
+            >
+              {planDetailsTwo.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center justify-between max-md:border-b max-md:border-dashed border-[rgba(226,234,253,0.10)] max-md:py-5 max-md:w-full"
+                  variants={fadeInUp}
+                >
+                  <div className="flex items-center gap-[10px]">
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      loading="lazy"
+                      className={`w-6 h-6 ${
+                        mode === "dark" ? "" : "filter invert grayscale"
+                      }`}
+                    />
+                    <span className="text-sm leading-none">{item.title}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
