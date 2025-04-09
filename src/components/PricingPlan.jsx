@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Eyebrow from "../ui/Eyebrow";
 import { Link } from "react-router-dom";
@@ -227,20 +227,7 @@ const pricingData = {
         { amount: "$5K", fee: "$199", target: "$500", maxDrawdown: "8%" },
         { amount: "$10K", fee: "$399", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
-        { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" },
-        {
-          amount: "$100K",
-          fee: "$3999",
-          target: "$10,000",
-          maxDrawdown: "12%",
-          popular: "popular",
-        },
-        {
-          amount: "$200K",
-          fee: "$7999",
-          target: "$20,000",
-          maxDrawdown: "14%",
-        },
+        { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" }
       ],
       description: "Two-phase, two-step challenge to test your trading skill.",
       addons: [
@@ -281,19 +268,6 @@ const pricingData = {
         { amount: "$10K", fee: "$399", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" },
-        {
-          amount: "$100K",
-          fee: "$3999",
-          target: "$10,000",
-          maxDrawdown: "12%",
-          popular: "popular",
-        },
-        {
-          amount: "$200K",
-          fee: "$7999",
-          target: "$20,000",
-          maxDrawdown: "14%",
-        },
       ],
       description:
         "Traditional two-step evaluation process for experienced traders.",
@@ -363,7 +337,7 @@ const PricingPlan = ({ mode }) => {
   const [activeTab, setActiveTab] = useState("Classic");
   const [category, setCategory] = useState("One Phase");
 
-  const plan = pricingData?.[category][activeTab];
+  const plan = useMemo(()=> pricingData?.[category][activeTab] , [category , activeTab]);
   const selectedPlan = plan.pricingOptions.find(
     (option) => option.amount === selectedAmount
   );
@@ -415,7 +389,7 @@ const PricingPlan = ({ mode }) => {
             <motion.button
               key={tab}
               className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
-            transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold
+            transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold opacity-1
             max-md:px-4 max-md:h-10  ${
               category === tab
                 ? mode === "dark"
@@ -483,7 +457,7 @@ const PricingPlan = ({ mode }) => {
                         ? " border-[rgba(255,204,0,0.10)] bg-[rgba(255,204,0,0.10)] text-primary shadow-[0px_4px_10px_0px_rgba(0,0,0,0.00)_inset]"
                         : " border-[rgba(31,31,31,0.10)] bg-[rgba(31,31,31,0.10)] text-dark1f"
                       : "border-transparent"
-                  }`}
+                  } ${plan && 'opacity-100'}`}
                   onClick={() => setSelectedAmount(item.amount)}
                   variants={popIn}
                 >
@@ -609,7 +583,7 @@ const PricingPlan = ({ mode }) => {
 const PlanCard = ({ data, mode }) => {
   return (
     <motion.div
-      className={`font-inter font-semibold rounded-[20px] p-6 border border-[rgba(255,255,255,0.10)] ${
+      className={`font-inter font-semibold rounded-[20px] p-3 border border-[rgba(255,255,255,0.10)] ${
         mode === "dark" ? "text-white bg-plan-card" : "text-dark1f bg-[#F1F1F1]"
       }`}
       style={{ backdropFilter: "blur(7.5px)" }}
@@ -633,11 +607,11 @@ const PlanCard = ({ data, mode }) => {
                 mode === "dark" ? "" : "filter invert grayscale"
               }`}
             />
-            <span className="text-sm leading-none">{item.title}</span>
+            <span className="text-sm leading-none"> {item.title} </span>
           </div>
           <div className="flex items-center gap-[10px]">
             {item.value && (
-              <span className="text-sm leading-none">{item.value}</span>
+              <span className="text-sm leading-none"> {` ${item.value}`} </span>
             )}
             {item.percentage && (
               <span className="text-sm leading-none p-[10px] font-medium rounded-[100px] bg-[rgba(255,255,255,0.10)] border border-[rgba(255,255,255,0.10)]">
