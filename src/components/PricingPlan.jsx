@@ -25,7 +25,7 @@ const pricingData = {
           fee: "$519",
           target: "$10,000",
           maxDrawdown: "12%",
-          popular: "popular",
+          popular: "Popular",
         },
         {
           amount: "$200K",
@@ -110,7 +110,7 @@ const pricingData = {
           fee: "$499",
           target: "$10,000",
           maxDrawdown: "12%",
-          popular: "popular",
+          popular: "Popular",
         },
         { amount: "$200K", fee: "$999", target: "$20,000", maxDrawdown: "14%" },
       ],
@@ -224,7 +224,6 @@ const pricingData = {
         ]
       ],
     },
-    
   },
 };
 const pricingCategory = ["One Phase", "Two Phase", "Instant"];
@@ -260,11 +259,11 @@ const PricingPlan = ({ mode }) => {
   const [activeTab, setActiveTab] = useState("Classic");
   const [category, setCategory] = useState("One Phase");
   
-  const plan = useMemo(()=> pricingData?.[category][activeTab] , [category , activeTab]);
-  const selectedPlan = plan.pricingOptions.find(
+  const plan = useMemo(()=> pricingData?.[category]?.[activeTab] , [category , activeTab]);
+  const selectedPlan = plan?.pricingOptions.find(
     (option) => option.amount === selectedAmount
   );
-  const numAddons = plan.addons.length;
+  const numAddons = plan?.addons?.length;
 const gridColsClass =
   numAddons === 1 ? "grid-cols-1" :
   numAddons === 2 ? "grid-cols-2" :
@@ -328,19 +327,22 @@ const gridColsClass =
                 ? "text-white bg-transparent"
                 : "text-dark1f"
             }`}
-              onClick={() => setCategory(tab)}
+              onClick={() => {
+                setCategory(tab);
+                tab ==="Instant" && setActiveTab("Classic");
+              }}
               variants={popIn}
             >
               {tab}
             </motion.button>
           ))}
         </motion.div>
-       {category !== "Instant" && <motion.div
+       {category !== "Instant" && <div
           className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
           variants={fadeInUp}
         >
           {Object.keys(pricingTabs).map((tab) => (
-            <motion.button
+            <button
               key={tab}
               className={`px-8 py-[10px] h-12 rounded-[100px] flex items-center justify-center 
                 transition-all duration-500 ease-in-out font-inter text-sm leading-none font-semibold 
@@ -358,9 +360,9 @@ const gridColsClass =
               variants={popIn}
             >
               1 {tab}
-            </motion.button>
+            </button>
           ))}
-        </motion.div>}
+        </div>}
 
         <div
           className={`p-[10px] rounded-[24px] border border-[rgba(255,255,255,0.05)] shadow-card-inset ${
@@ -377,8 +379,8 @@ const gridColsClass =
               className="grid grid-cols-3 gap-x-2.5 gap-y-5 text-center font-inter text-sm leading-none max-lg:grid-cols-2"
               variants={containerVariants}
             >
-              {plan.pricingOptions.map((item, index) => (
-                <motion.button
+              {plan?.pricingOptions?.map((item, index) => (
+                <button
                   key={index}
                   className={`rounded-[100px] p-[10px] cursor-pointer border flex items-center justify-center gap-2.5 ${
                     selectedAmount === item.amount
@@ -390,9 +392,9 @@ const gridColsClass =
                   onClick={() => setSelectedAmount(item.amount)}
                   variants={popIn}
                 >
-                  {item.amount}
+                  {item?.amount}
 
-                  {item.popular && (
+                  {item?.popular && (
                     <span
                       className={`hidden lg:flex text-[12px] font-inter relative h-[26px] max-w-max items-center justify-center gap-2 rounded-[100px] py-2 px-[10px]  ${
                         mode === "dark"
@@ -400,10 +402,10 @@ const gridColsClass =
                           : "text-dark1f bg-[#F1F1F1]"
                       }`}
                     >
-                      {item.popular}
+                      {item?.popular}
                     </span>
                   )}
-                </motion.button>
+                </button>
               ))}
             </motion.div>
           </motion.div>
@@ -432,7 +434,7 @@ const gridColsClass =
             >
               Start trading now
               <span className={`text-[32px] leading-none font-semibold `}>
-                {selectedPlan.fee}{" "}
+                {selectedPlan?.fee}{" "}
               </span>
               <span className={`text-sm font-normal leading-none opacity-80 `}>
                 one time fee <span className="w-12"></span>
@@ -443,9 +445,9 @@ const gridColsClass =
             variants={fadeInUp}
             className={`grid grid-cols-1 lg:${gridColsClass} gap-2.5`}
           >
-            {plan.addons.map((item) => (
+            {plan?.addons?.map((item, index) => (
               
-              <PlanCard data={item} mode={mode} />
+              <PlanCard data={item} mode={mode} keyValue={index} />
               
             ))}
           </motion.div>
@@ -461,7 +463,7 @@ const gridColsClass =
             >
               Start trading now
               <span className={`text-[32px] leading-none font-semibold `}>
-                {selectedPlan.fee}{" "}
+                {selectedPlan?.fee}{" "}
               </span>
               <span className={`text-sm font-normal leading-none opacity-80 `}>
                 one time fee <span className="w-12"></span>
@@ -484,7 +486,7 @@ const gridColsClass =
               className="flex flex-wrap items-center justify-between md:pb-5 md:pt-10 border-b border-dashed border-[rgba(226,234,253,0.10)] max-md:gap-0"
               variants={fadeInUp}
             >
-              {planDetailsTwo.map((item, index) => (
+              {planDetailsTwo?.map((item, index) => (
                 <motion.div
                   key={index}
                   className="flex items-center justify-between max-md:border-b max-md:border-dashed border-[rgba(226,234,253,0.10)] max-md:py-5 max-md:w-full"
@@ -511,12 +513,13 @@ const gridColsClass =
   );
 };
 
-const PlanCard = ({ data, mode }) => {
+const PlanCard = ({ data, mode , keyValue }) => {
   return (
     <motion.div
       className={`font-inter font-semibold rounded-[20px] p-3 border border-[rgba(255,255,255,0.10)] ${
         mode === "dark" ? "text-white bg-plan-card" : "text-dark1f bg-[#F1F1F1]"
       }`}
+      key={keyValue}
       style={{ backdropFilter: "blur(7.5px)" }}
       variants={cardVariants}
       initial="hidden"
