@@ -7,9 +7,9 @@ import PricingBg from "../assets/images/pricing-bg.svg";
 
 const planDetailsTwo = [
   { icon: Check, title: "7 days payout", value: "3 Days" },
-  { icon: Check, title: "Profit split up to 95%", value: "up to 95%" },
+  { icon: Check, title: "Profit Split up to 95%", value: "up to 95%" },
   { icon: Check, title: "Max  Drawdown up to 12%", value: "Trailing" },
-  { icon: Check, title: "Reset discount", value: "100%" },
+  { icon: Check, title: "Reset Discount", value: "100%" },
 ];
 
 const pricingData = {
@@ -34,36 +34,27 @@ const pricingData = {
           maxDrawdown: "14%",
         },
       ],
-      description: "Two-phase, two-step challenge to test your trading skill.",
+      description: "ONE-phase, ONE-step challenge to test your trading skill.",
       addons: [
         [
           { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "8%" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Profit Target", value: "8%" },
+          { icon: Check, title: "Max Daily Loss", value: "3%" },
           { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "No" },
-          { icon: Check, title: "Profit split", value: "80%" },
-          { icon: Check, title: "Reset discount", value: "10%" },
+          { icon: Check, title: "Leverage", value: "1:100" },
+          { icon: Check, title: "Trade Through News", value: "yes" },
+          { icon: Check, title: "Profit Split", value: "-" },
+          { icon: Check, title: "Reset Discount", value: "10%" },
         ],
-        [
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "8%" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
+         [
+          { icon: Check, title: "Minimum Trading Days", value: "10 working days for first payout" },
+          { icon: Check, title: "Profit Target", value: "-" },
+          { icon: Check, title: "Max Daily Loss", value: "3%" },
           { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "No" },
-          { icon: Check, title: "Profit split", value: "80%" },
-          { icon: Check, title: "Reset discount", value: "10%" },
-        ], [
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "-" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
-          { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "No" },
-          { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
-          { icon: Check, title: "Reset discount", value: "10%" },
+          { icon: Check, title: "Leverage", value: "1:50" },
+          { icon: Check, title: "Trade Through News", value: "5 min rules" },
+          { icon: Check, title: "Profit Split", value: "80-95%" },
+          { icon: Check, title: "Reset Discount", value: "-" },
         ],
       ],
     },
@@ -73,8 +64,7 @@ const pricingData = {
         { amount: "$10K", fee: "$99", target: "$1,000", maxDrawdown: "8%" },
         { amount: "$25K", fee: "$199", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$349", target: "$5,000", maxDrawdown: "12%" },
-        {
-          amount: "$100K",
+        { amount: "$100K",
           fee: "$499",
           target: "$10,000",
           maxDrawdown: "12%",
@@ -86,33 +76,24 @@ const pricingData = {
         "Traditional two-step evaluation process for experienced traders.",
         addons: [
           [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "10%" },
-            { icon: Check, title: "Max daily loss", value: "2%" },
+            { icon: Check, title: "Minimum Trading Days", value: "5 Days" },
+            { icon: Check, title: "Profit Target", value: "10%" },
+            { icon: Check, title: "Max Daily Loss", value: "2%" },
             { icon: Check, title: "Max loss", value: "8%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-            { icon: Check, title: "Reset discount", value: "10%" },
+            { icon: Check, title: "Leverage", value: "1:100" },
+            { icon: Check, title: "Trade Through News", value: "yes" },
+            { icon: Check, title: "Profit Split", value: "-" },
+            { icon: Check, title: "Reset Discount", value: "10%" },
           ],
-          [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "10%" },
-            { icon: Check, title: "Max daily loss", value: "2%" },
+         [
+            { icon: Check, title: "Minimum Trading Days", value: "10 working days for first payout" },
+            { icon: Check, title: "Profit Target", value: "-" },
+            { icon: Check, title: "Max Daily Loss", value: "2%" },
             { icon: Check, title: "Max loss", value: "8%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80%" },
-            { icon: Check, title: "Reset discount", value: "10%" },
-          ], [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "-" },
-            { icon: Check, title: "Max daily loss", value: "2%" },
-            { icon: Check, title: "Max loss", value: "8%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "No" },
-            { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
-            { icon: Check, title: "Reset discount", value: "10%" },
+            { icon: Check, title: "Leverage", value: "1:50" },
+            { icon: Check, title: "Trade Through News", value: "5 min rules" },
+            { icon: Check, title: "Profit Split", value: "80-95% " },
+            { icon: Check, title: "Reset Discount", value: "-" },
           ],
         ],
     },
@@ -137,32 +118,32 @@ const pricingData = {
       addons: [
         [
           { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "8%" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
+          { icon: Check, title: "Profit Target", value: "8%" },
+          { icon: Check, title: "Max Daily Loss", value: "5%" },
           { icon: Check, title: "Max loss", value: "8%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "allowed" },
-          { icon: Check, title: "Profit split", value: "-" },
-          { icon: Check, title: "Reset discount", value: "20%" },
+          { icon: Check, title: "Leverage", value: "1:100" },
+          { icon: Check, title: "Trade Through News", value: "Yes" },
+          { icon: Check, title: "Profit Split", value: "-" },
+          { icon: Check, title: "Reset Discount", value: "20%" },
         ],
         [
           { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "5%" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
+          { icon: Check, title: "Profit Target", value: "5%" },
+          { icon: Check, title: "Max Daily Loss", value: "5%" },
           { icon: Check, title: "Max loss", value: "8%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "allowed" },
-          { icon: Check, title: "Profit split", value: "-" },
-          { icon: Check, title: "Reset discount", value: "20%" },
+          { icon: Check, title: "Leverage", value: "1:100" },
+          { icon: Check, title: "Trade Through News", value: "Yes" },
+          { icon: Check, title: "Profit Split", value: "-" },
+          { icon: Check, title: "Reset Discount", value: "-" },
         ], [
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "-" },
-          { icon: Check, title: "Max daily loss", value: "5%" },
-          { icon: Check, title: "Max loss", value: "10%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-          { icon: Check, title: "Profit split", value: "80 up to 95% (add on)" },
-          { icon: Check, title: "Reset discount", value: "20%" },
+          { icon: Check, title: "Minimum Trading Days", value: "10 working days for first payout" },
+          { icon: Check, title: "Profit Target", value: "-" },
+          { icon: Check, title: "Max Daily Loss", value: "5%" },
+          { icon: Check, title: "Max loss", value: "8%"},
+          { icon: Check, title: "Leverage", value: "1:50" },
+          { icon: Check, title: "Trade Through News", value: "5 min rules" },
+          { icon: Check, title: "Profit Split", value: "80-95%" },
+          { icon: Check, title: "Reset Discount", value: "-" },
         ],
       ],
     },
@@ -187,36 +168,36 @@ const pricingData = {
         },
       ],
       description:
-        "Traditional two-step evaluation process for experienced traders.",
+        "Traditional two-step evaluation process for experienced traders",
         addons: [
           [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "10%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "allowed" },
-            { icon: Check, title: "Profit split", value: "-" },
-            { icon: Check, title: "Reset discount", value: "20%" },
+            { icon: Check, title: "Minimum Trading Days", value: "1 Days" },
+            { icon: Check, title: "Profit Target", value: "10%" },
+            { icon: Check, title: "Max Daily Loss", value: "5%" },
+            { icon: Check, title: "Max loss", value: "10% up to 12%"},
+            { icon: Check, title: "Leverage", value: "1:50" },
+            { icon: Check, title: "Trade Through News", value: "yes" },
+            { icon: Check, title: "Profit Split", value: "-" },
+            { icon: Check, title: "Reset Discount", value: "20%" },
           ],
           [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "5%" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "allowed" },
-            { icon: Check, title: "Profit split", value: "-" },
-            { icon: Check, title: "Reset discount", value: "-" },
+            { icon: Check, title: "Minimum Trading Days", value: "1 Days" },
+            { icon: Check, title: "Profit Target", value: "5%" },
+            { icon: Check, title: "Max Daily Loss", value: "5%" },
+            { icon: Check, title: "Max loss", value: "10% up to 12%"},
+            { icon: Check, title: "Leverage", value: "1:50" },
+            { icon: Check, title: "Trade Through News", value: "yes" },
+            { icon: Check, title: "Profit Split", value: "-" },
+            { icon: Check, title: "Reset Discount", value: "-" },
           ], [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "-" },
-            { icon: Check, title: "Max daily loss", value: "5%" },
-            { icon: Check, title: "Max loss", value: "10% up to 12% (40 % add on)"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-            { icon: Check, title: "Profit split", value: "80 up to 95% (add on or galactic status)" },
-            { icon: Check, title: "Reset discount", value: "-" },
+            { icon: Check, title: "Minimum Trading Days", value: "10 working days for first payout" },
+            { icon: Check, title: "Profit Target", value: "-" },
+            { icon: Check, title: "Max Daily Loss", value: "5%" },
+            { icon: Check, title: "Max loss", value: "10% up to 12%"},
+            { icon: Check, title: "Leverage", value: "1:50" },
+            { icon: Check, title: "Trade Through News", value: "5 min rules" },
+            { icon: Check, title: "Profit Split", value: "80-95%" },
+            { icon: Check, title: "Reset Discount", value: "-" },
           ],
         ],
     },
@@ -229,79 +210,21 @@ const pricingData = {
         { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
         { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" }
       ],
-      description: "Two-phase, two-step challenge to test your trading skill.",
+      description: "INSTANT ACCOUNT",
       addons: [
         [
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "-" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
+          { icon: Check, title: "Minimum Trading Days", value: "10 working days for first payout" },
+          { icon: Check, title: "Profit Target", value: "-" },
+          { icon: Check, title: "Max Daily Loss", value: "3%" },
           { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-          { icon: Check, title: "Reset discount", value: "10%" },
-        ],
-        [
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "-" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
-          { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-          { icon: Check, title: "Reset discount", value: "10%" },
-        ],[
-          { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-          { icon: Check, title: "Profit target", value: "-" },
-          { icon: Check, title: "Max daily loss", value: "3%" },
-          { icon: Check, title: "Max loss", value: "5%"},
-          { icon: Check, title: "Levrage", value: "1:100" },
-          { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-          { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-          { icon: Check, title: "Reset discount", value: "10%" },
-        ],
+          { icon: Check, title: "Leverage", value: "1:30" },
+          { icon: Check, title: "Trade Through News", value: "5 min rules" },
+          { icon: Check, title: "Profit Split", value: "55% up tp 95%" },
+          { icon: Check, title: "Reset Discount", value: "-" },
+        ]
       ],
     },
-    Plus: {
-      pricingOptions: [
-        { amount: "$5K", fee: "$199", target: "$500", maxDrawdown: "8%" },
-        { amount: "$10K", fee: "$399", target: "$1,000", maxDrawdown: "8%" },
-        { amount: "$25K", fee: "$999", target: "$2,500", maxDrawdown: "10%" },
-        { amount: "$50K", fee: "$1999", target: "$5,000", maxDrawdown: "12%" },
-      ],
-      description:
-        "Traditional two-step evaluation process for experienced traders.",
-        addons: [
-          [
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "-" },
-            { icon: Check, title: "Max daily loss", value: "3%" },
-            { icon: Check, title: "Max loss", value: "5%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-            { icon: Check, title: "Reset discount", value: "10%" },
-          ],[
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "-" },
-            { icon: Check, title: "Max daily loss", value: "3%" },
-            { icon: Check, title: "Max loss", value: "5%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-            { icon: Check, title: "Reset discount", value: "10%" },
-          ],[
-            { icon: Check, title: "Minimum Trading Days", value: "3 Days" },
-            { icon: Check, title: "Profit target", value: "-" },
-            { icon: Check, title: "Max daily loss", value: "3%" },
-            { icon: Check, title: "Max loss", value: "5%"},
-            { icon: Check, title: "Levrage", value: "1:100" },
-            { icon: Check, title: "Trade Throught News", value: "5 min rules" },
-            { icon: Check, title: "Profit split", value: "55 up tp 95% (add on or galactic status)" },
-            { icon: Check, title: "Reset discount", value: "10%" },
-          ],
-        ],
-    },
+    
   },
 };
 const pricingCategory = ["One Phase", "Two Phase", "Instant"];
@@ -343,6 +266,7 @@ const PricingPlan = ({ mode }) => {
   );
 
   const pricingTabs = pricingData?.[category];
+  console.log(pricingTabs);
 
   return (
     <motion.section
@@ -406,7 +330,7 @@ const PricingPlan = ({ mode }) => {
             </motion.button>
           ))}
         </motion.div>
-        <motion.div
+       {category !== "Instant" && <motion.div
           className="flex gap-5 mb-10 justify-center max-md:flex-wrap"
           variants={fadeInUp}
         >
@@ -431,7 +355,7 @@ const PricingPlan = ({ mode }) => {
               1 {tab}
             </motion.button>
           ))}
-        </motion.div>
+        </motion.div>}
 
         <div
           className={`p-[10px] rounded-[24px] border border-[rgba(255,255,255,0.05)] shadow-card-inset ${
@@ -487,9 +411,9 @@ const PricingPlan = ({ mode }) => {
               : "text-dark1f"
           }`}
           >
-            <span className="font-medium font-inter text-sm">Phase 1</span>
-            <span className="font-medium font-inter text-sm">Phase 2</span>
-            <span className="font-medium font-inter text-sm">Funded</span>
+           {category !== "Instant" && <span className="font-medium font-inter text-sm">Phase 1</span> }
+            { category === "Two Phase" && <span className="font-medium font-inter text-sm">Phase 2</span>}
+             <span className="font-medium font-inter text-sm">Funded</span>
           </motion.div>
           <motion.div variants={fadeInUp} className={`my-5 block lg:hidden`}>
             <Link
@@ -512,7 +436,7 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid grid-cols-1 lg:grid-cols-3 gap-2.5`}
+            className={`flex gap-2.5`}
           >
             {plan.addons.map((item) => (
               <PlanCard data={item} mode={mode} />
