@@ -259,11 +259,16 @@ const PricingPlan = ({ mode }) => {
   const [selectedAmount, setSelectedAmount] = useState("$5K");
   const [activeTab, setActiveTab] = useState("Classic");
   const [category, setCategory] = useState("One Phase");
-
+  
   const plan = useMemo(()=> pricingData?.[category][activeTab] , [category , activeTab]);
   const selectedPlan = plan.pricingOptions.find(
     (option) => option.amount === selectedAmount
   );
+  const numAddons = plan.addons.length;
+const gridColsClass =
+  numAddons === 1 ? "grid-cols-1" :
+  numAddons === 2 ? "grid-cols-2" :
+  "grid-cols-3";
 
   const pricingTabs = pricingData?.[category];
   console.log(pricingTabs);
@@ -404,7 +409,7 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid grid-cols-3 text-center  border-opacity-5 py-7
+            className={`grid ${gridColsClass} text-center  border-opacity-5 py-7
           ${
             mode === "dark"
               ? "text-[#FBF6EC] bg-[#050505] border-white"
@@ -436,10 +441,12 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`flex gap-2.5`}
+            className={`grid grid-cols-1 lg:${gridColsClass} gap-2.5`}
           >
             {plan.addons.map((item) => (
+              
               <PlanCard data={item} mode={mode} />
+              
             ))}
           </motion.div>
           <motion.div variants={fadeInUp} className={`my-5 hidden lg:block`}>
