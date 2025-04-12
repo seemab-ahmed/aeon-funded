@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const TermsAndConditions = ({ mode }) => {
   return (
     <section className="py-[120px] max-xl:py-20">
+
       <div className="container max-w-[1240px]">
         {/* Title */}
         <h2
@@ -473,6 +474,24 @@ const TermsAndConditions = ({ mode }) => {
           security, notifying us immediately of any breaches.
         </p>
       </div>
+
+      <div className="mx-auto text-center flex flex-col gap-2 justify-center items-center">
+                    <p className={`font-inter text-md ${
+                      mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
+                    }`}>Meydan Grandstand, 6th floor, Meydan Road Dubai, ARE</p>
+                    <Link href="mailto:support@aeonfunded.com" 
+                    className={`font-inter text-md ${
+                      mode === "dark" ? "text-primary" : "text-dark1f font-bold"
+                    }`}>support@aeonfunded.com</Link>
+                    <Link href="tel:+971 058 563 9468" 
+                    className={`font-inter text-md ${
+                      mode === "dark" ? "text-primary" : "text-dark1f font-bold"
+                    }`}>+971 058 563 9468</Link>
+                    <Link href="mailto:compliance@aeonfunded.com " 
+                    className={`font-inter text-md ${
+                      mode === "dark" ? "text-primary" : "text-dark1f font-bold"
+                    }`}>compliance@aeonfunded.com </Link>
+                  </div>
     </section>
   );
 };

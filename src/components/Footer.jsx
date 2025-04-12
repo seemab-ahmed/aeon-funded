@@ -119,23 +119,7 @@ const Footer = ({ mode }) => {
               ))}
             </ul>
           </div>
-          <div className="mx-auto text-center flex flex-col gap-2 justify-center items-center">
-            <p className={`font-inter opacity-80  text-sm ${
-              mode === "dark" ? "text-ivoryTint" : "text-dark1f"
-            }`}>Meydan Grandstand, 6th floor, Meydan Road Dubai, ARE</p>
-            <Link href="mailto:support@aeonfunded.com" 
-            className={`font-inter opacity-80  text-sm ${
-              mode === "dark" ? "text-ivoryTint" : "text-dark1f"
-            }`}>support@aeonfunded.com</Link>
-            <Link href="tel:+971 058 563 9468" 
-            className={`font-inter opacity-80  text-sm ${
-              mode === "dark" ? "text-ivoryTint" : "text-dark1f"
-            }`}>+971 058 563 9468</Link>
-            <Link href="mailto:compliance@aeonfunded.com " 
-            className={`font-inter opacity-80  text-sm ${
-              mode === "dark" ? "text-ivoryTint" : "text-dark1f"
-            }`}>compliance@aeonfunded.com </Link>
-          </div>
+          
         <ul className="flex items-center my-8 gap-[10px] justify-center max-md:flex-col">
           {policyLinks.map((nav, index) => (
             <li key={index}>
