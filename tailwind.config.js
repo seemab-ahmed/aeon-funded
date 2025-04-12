@@ -3,6 +3,11 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  safelist: [
+    'lg:grid-cols-1',
+    'lg:grid-cols-2',
+    'lg:grid-cols-3',
+  ],
   theme: {
     extend: {
       fontFamily: {

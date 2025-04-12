@@ -170,7 +170,7 @@ const pricingData = {
       description:
         "Traditional two-step evaluation process for experienced traders",
         addons: [
-          [
+         [
             { icon: Check, title: "Minimum Trading Days", value: "1 Days" },
             { icon: Check, title: "Profit Target", value: "10%" },
             { icon: Check, title: "Max Daily Loss", value: "5%" },
@@ -264,13 +264,13 @@ const PricingPlan = ({ mode }) => {
     (option) => option.amount === selectedAmount
   );
   const numAddons = plan?.addons?.length;
-const gridColsClass =
-  numAddons === 1 ? "grid-cols-1" :
-  numAddons === 2 ? "grid-cols-2" :
-  "grid-cols-3";
-
+  
+  const gridColsClass =
+  numAddons === 1 ? "lg:grid-cols-1" :
+  numAddons === 2 ? "lg:grid-cols-2" :
+  "lg:grid-cols-3";
   const pricingTabs = pricingData?.[category];
-  console.log(pricingTabs);
+
 
   return (
     <motion.section
@@ -329,7 +329,10 @@ const gridColsClass =
             }`}
               onClick={() => {
                 setCategory(tab);
-                tab ==="Instant" && setActiveTab("Classic");
+                if(tab ==="Instant") {
+                  setActiveTab("Classic");
+                  setSelectedAmount("$5K");
+                }
               }}
               variants={popIn}
             >
@@ -411,7 +414,7 @@ const gridColsClass =
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid ${gridColsClass} text-center  border-opacity-5 py-7
+            className={`hidden lg:grid ${gridColsClass} text-center  border-opacity-5 py-7
           ${
             mode === "dark"
               ? "text-[#FBF6EC] bg-[#050505] border-white"
@@ -443,7 +446,7 @@ const gridColsClass =
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className={`grid grid-cols-1 lg:${gridColsClass} gap-2.5`}
+            className={`grid grid-cols-1 ${gridColsClass} gap-2.5`}
           >
             {plan?.addons?.map((item, index) => (
               
@@ -471,7 +474,7 @@ const gridColsClass =
             </Link>
           </motion.div>
           <motion.div
-            className={`font-inter font-semibold rounded-[20px] px-6 pb-6 border border-[rgba(255,255,255,0.10)] ${
+            className={` hidden font-inter font-semibold rounded-[20px] px-6 pb-6 border border-[rgba(255,255,255,0.10)] ${
               mode === "dark"
                 ? "text-white bg-plan-card"
                 : "text-dark1f bg-[#F1F1F1]"
