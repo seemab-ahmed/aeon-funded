@@ -362,7 +362,7 @@ const PricingPlan = ({ mode }) => {
               onClick={() => setActiveTab(tab)}
               variants={popIn}
             >
-              1 {tab}
+              {tab}
             </button>
           ))}
         </div>}
@@ -456,7 +456,8 @@ const PricingPlan = ({ mode }) => {
           </motion.div>
           <motion.div variants={fadeInUp} className={`my-5 hidden lg:block`}>
             <Link
-              to="/"
+              to="https://trading.aeonfunded.com/auth/sign-up/"
+              target="_blank"
               className={`rounded-[100px] px-8 py-[10px] text-sm leading-none font-semibold h-20 
                 flex items-center justify-center gap-2 max-md:px-4 ${
                   mode === "dark"
