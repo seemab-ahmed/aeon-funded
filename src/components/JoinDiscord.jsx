@@ -63,7 +63,7 @@ const JoinDiscord = ({ mode }) => {
             >
               Your journey starts here with growth and success.
             </p>
-            <Button text="Join our Discord Community" mode={mode} />
+            <Button to="https://discord.gg/6QfJng6pfs" target="_blank" text="Join our Discord Community" mode={mode} />
           </div>
 
           {/* bg radial  */}

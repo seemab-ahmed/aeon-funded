@@ -31,7 +31,7 @@ const Partner = ({mode}) => {
             Develop your trading skills, maximize your returns, and become a top-performing asset. Trade with our capital and keep up to 90% of your profits.
             </p>
             <div className="flex mt-8">
-              <Link to='/' className={` font-inter font-medium leading-none rounded-full h-10 py-4 px-8 flex items-center justify-center gap-2 bg-white text-black shadow-nav-shadow`}>
+              <Link to='https://trading.aeonfunded.com/auth/sign-up/' target="_blank" className={` font-inter font-medium leading-none rounded-full h-10 py-4 px-8 flex items-center justify-center gap-2 bg-white text-black shadow-nav-shadow`}>
               Be a Partner now
               </Link>
             </div>
