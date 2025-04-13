@@ -48,7 +48,8 @@ const CenterBanner = ({ mode }) => {
             Help AeonFunded grow and earn up to 20% commission – There’s no limit on how much you can earn profit!
           </p>
           <Link
-            to="/"
+            to="https://trading.aeonfunded.com/auth/sign-up"
+            target="_blank"
             className={`btn text-[16px] font-inter font-medium leading-none shadow-nav-shadow rounded-[100px] h-10 px-8 py-4 flex items-center justify-center
                 ${mode === "dark" ? "text-black bg-white" : "text-white bg-black"}`}
           >
