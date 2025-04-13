@@ -97,7 +97,7 @@ const AboutSection = ({ mode }) => {
                     {card.description}
                   </p>
                 </div>
-                <Button to="/" text="Learn More" variant="gold" size="small" hasIcon={true} icon={ArrowRight} mode={mode} />
+                <Button to="https://trading.aeonfunded.com/auth/sign-up/" target="_blank" text="Learn More" variant="gold" size="small" hasIcon={true} icon={ArrowRight} mode={mode} />
               </div>
             </motion.div>
           ))}

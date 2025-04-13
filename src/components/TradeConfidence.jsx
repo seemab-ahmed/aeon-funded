@@ -31,7 +31,7 @@ const TradeConfidence = ({mode}) => {
             Develop your trading skills, maximize your returns, and become a top-performing asset. Trade with our capital and keep up to 90% of your profits.
             </p>
             <div className="flex mt-8">
-              <Button to="/" text="Start Now" variant='white'  mode={mode} />
+              <Button to="https://trading.aeonfunded.com/auth/sign-up" target="_blank" text="Start Now" variant='white'  mode={mode} />
             </div>
           </div>
           <div ref={cubeRef}>

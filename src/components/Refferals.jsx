@@ -241,7 +241,7 @@ const RefferCard = ({ data, mode }) => {
           ))}
           <div className="mt-5 btn-wrp">
             <Button
-              to="/"
+              to="https://trading.aeonfunded.com/auth/sign-up"
               text="Learn More"
               variant="gold"
               size="small"

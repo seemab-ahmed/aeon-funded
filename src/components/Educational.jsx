@@ -64,7 +64,8 @@ const Educational = ({ mode }) => {
               Join elite traders in our advanced funding program. Prove yours skills, access substantial capital, and trade with confidence..
             </p>
             <div className="flex gap-[10px] mt-8 max-lg:justify-center">
-              <Button to="/" text="Start Now" mode={mode} />
+              <Button to="https://trading.aeonfunded.com/auth/sign-up"
+            target="_blank" text="Start Now" mode={mode} />
             </div>
           </motion.div>
           {/* Right Column */}

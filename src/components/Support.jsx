@@ -122,7 +122,7 @@ const Support = ({ mode }) => {
               We understand how at times you need answers fast! That's why we operate 24/7, 7 days a week, with a dedicated support team for our partners!
             </p>
             <div className="flex gap-[10px] mt-8 max-lg:justify-center">
-              <Button to="/" text="Connect now" mode={mode} />
+              <Button to="https://trading.aeonfunded.com/auth/sign-up" target={"_blank"} text="Connect now" mode={mode} />
             </div>
           </motion.div>
         </motion.div>

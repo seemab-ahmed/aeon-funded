@@ -43,7 +43,7 @@ const Challenge = ({ mode }) => {
               5 days, stay profitable, and within the drawdown limit.
             </p>
             <div className="flex gap-[10px] mt-8 max-lg:justify-center">
-              <Button to="/" text="Start Challenge" mode={mode} />
+              <Button to="https://trading.aeonfunded.com/auth/sign-up/" target="_blank" text="Start Challenge" mode={mode} />
             </div>
           </motion.div>
           {/* Animate the image */}

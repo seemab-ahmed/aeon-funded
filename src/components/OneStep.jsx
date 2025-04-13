@@ -12,7 +12,7 @@ const benifitsCards = [
     title: "Payout Guarantee",
     shortTitle: "Get Paid in 48 Hours or We Pay 100% Profit Split",
     description: "Our commitment to timely payouts sets us apart in the industry.",
-    link: "/",
+    link: "https://trading.aeonfunded.com/auth/sign-up",
   },
   {
     icon: Easy,
