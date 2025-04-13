@@ -134,7 +134,7 @@ const Header = ({ mode }) => {
             </ul>
             <div className="hidden max-lg:flex max-lg:flex-col mt-4 justify-center lg:flex-row items-center gap-[14px]">
               <Link
-                to="http://trading.aeonfunded.com"
+                to="https://trading.aeonfunded.com/auth/sign-up/"
                 target="_blank"
                 className={`btn font-inter font-medium leading-none rounded-[100px] h-10 px-5 py-4 flex items-center justify-center
                   ${mode === "dark" ? "bg-[#FFD221] text-black shadow-nav-shadow hover:bg-white hover:text-black" : "bg-black text-white hover:bg-primary hover:text-black"}`}
@@ -142,7 +142,7 @@ const Header = ({ mode }) => {
                 Get Funded
               </Link>
               <Link
-                to="http://trading.aeonfunded.com"
+                to="https://trading.aeonfunded.com/auth/sign-up/"
                 target="_blank"
                 className={`btn font-inter font-medium leading-none rounded-[100px] transition-all duration-300 ease-in-out
                    h-10 px-5 py-4 flex items-center justify-center
@@ -154,7 +154,7 @@ const Header = ({ mode }) => {
           </nav>
           <div className="hidden lg:flex flex-col lg:flex-row items-center gap-[14px]">
             <Link
-              to="http://trading.aeonfunded.com"
+              to="https://trading.aeonfunded.com/auth/sign-up/"
               target="_blank"
               className={`btn font-inter font-medium leading-none rounded-[100px] h-10 px-5 py-4 flex items-center justify-center transition-all duration-300 ease-in-out
               ${mode === "dark" ? "bg-[#FFD221] text-black shadow-nav-shadow hover:bg-white hover:text-black" : "bg-black text-white hover:bg-primary hover:text-black"}`}
@@ -162,7 +162,7 @@ const Header = ({ mode }) => {
               Get Funded
             </Link>
             <Link
-              to="http://trading.aeonfunded.com"
+              to="https://trading.aeonfunded.com/auth/sign-up/"
               target="_blank"
               className={`btn font-inter font-medium leading-none rounded-[100px] h-10 px-5 py-4 flex items-center justify-center transition-all duration-300 ease-in-out
                 ${mode === "dark" ? "bg-[rgba(255,255,255,0.10)] text-white shadow-nav-shadow hover:bg-white hover:text-black" : "text-black hover:bg-dark1f hover:text-white"}`}

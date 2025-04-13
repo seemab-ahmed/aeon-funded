@@ -79,7 +79,7 @@ const Banner = ({ mode }) => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
             >
               <Button
-                to="http://trading.aeonfunded.com"
+                to="https://trading.aeonfunded.com/auth/sign-up/"
                 target="_blank"
                 text="Get Funded"
                 mode={mode}

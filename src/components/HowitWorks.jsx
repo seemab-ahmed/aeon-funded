@@ -84,7 +84,7 @@ const HowitWorks = ({ mode }) => {
               Your skills with our risk. You're not liable for any losses.
             </p>
             <div className="flex gap-[10px] mt-8 max-lg:justify-center">
-              <Button to="http://trading.aeonfunded.com" text="Get Funded" mode={mode} target="_blank" />
+              <Button to="https://trading.aeonfunded.com/auth/sign-up/" text="Get Funded" mode={mode} target="_blank" />
               <Button to="/how-it-works" text="Learn More" variant="gold" hasIcon={true} icon={ArrowRight} mode={mode} />
             </div>
           </div>
