@@ -10,6 +10,8 @@ import Reviews from "../components/Reviews";
 import JoinDiscord from "../components/JoinDiscord";
 import Faqs from "../components/Faqs";
 import { useLocation } from "react-router-dom";
+import OffImg from "../assets/images/off-text.png";
+
 
 const Home = ({mode}) => {
   const location = useLocation();
@@ -36,6 +38,9 @@ const Home = ({mode}) => {
       <HowitWorks mode={mode} />
       <PricingPlan mode={mode} />
       <Secure mode={mode}/>
+      <div className={`w-full ${
+            mode === "dark" ? "" : "filter  grayscale"
+          }`}><img src={OffImg} className="w-full object-cover" alt="Text Off Img" /></div>
       <Benifits mode={mode} />
       <div className="px-6 max-md:px-4">
         <Reviews mode={mode} />
