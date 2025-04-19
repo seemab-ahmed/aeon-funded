@@ -11,7 +11,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-white" : "text-dark1f"
           }`}
         >
-          Terms and Conditions of Aeon Analytics FZ-LLC
+          Terms and Conditions of Aeon Funded L.L.C FZ
         </h2>
 
         {/* Important Notice */}
@@ -22,7 +22,7 @@ const TermsAndConditions = ({ mode }) => {
         >
           <strong>Important Notice:</strong> Please review this Agreement thoroughly
           before proceeding. By accessing or utilizing the Platform or Services of Aeon
-          Analytics FZ-LLC, or by otherwise agreeing to these terms, you confirm your
+          Funded L.L.C FZ, or by otherwise agreeing to these terms, you confirm your
           understanding and commitment to be legally bound by this Agreement. This
           includes acknowledging that you may be relinquishing certain legal rights.
         </p>
@@ -40,10 +40,10 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Welcome to the digital ecosystem of Aeon Analytics FZ-LLC, accessible via <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
+          Welcome to the digital ecosystem of Aeon Funded L.L.C FZ, accessible via <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
           (hereinafter referred to as the “Company”). The Company operates an array of online
           services, resources, and interactive features (collectively, the “Platform”), all of which
-          are provided by Aeon Analytics FZ-LLC. Your interaction with the Platform is contingent
+          are provided by Aeon Funded L.L.C FZ. Your interaction with the Platform is contingent
           upon your full acceptance of the rules, terms, and notices outlined herein (collectively,
           the “Terms” or “Agreement”). Engaging with the Platform indicates your consent to these
           Terms in their entirety.
@@ -89,7 +89,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Aeon Analytics FZ-LLC provides a range of programs and evaluation tools designed to allow
+          Aeon Funded L.L.C FZ provides a range of programs and evaluation tools designed to allow
           traders to demonstrate their abilities through simulated trading environments. These
           programs involve achieving predefined objectives to successfully complete the evaluations.
           Success in these assessments hinges on discipline and steady effort—there’s no need to hasten
@@ -112,7 +112,7 @@ const TermsAndConditions = ({ mode }) => {
         >
           Upon enrolling in an evaluation program, you will receive login details immediately. Altering
           these credentials is strictly forbidden, and any attempt to do so will result in the suspension
-          of your account. Aeon Analytics FZ-LLC seeks traders with genuine skill and a long-term vision,
+          of your account. Aeon Funded L.L.C FZ seeks traders with genuine skill and a long-term vision,
           emphasizing the principle: “Your Strategies, Our Support.” The use of automated tools such as
           signal bots, trade management services, or position copiers is prohibited. Our systems
           continuously monitor trader activity, and any rule violation will lead to account suspension.
@@ -177,7 +177,7 @@ const TermsAndConditions = ({ mode }) => {
           When using the Platform, you are tasked with safeguarding the confidentiality of your account
           credentials, including your username and password, and limiting access to your devices. You bear
           full responsibility for all activities conducted through your account. Transferring or assigning
-          your account to another individual or entity is prohibited. Aeon Analytics FZ-LLC is not liable
+          your account to another individual or entity is prohibited. Aeon Funded L.L.C FZ is not liable
           for unauthorized access to your account resulting from theft or misuse. The Company reserves the
           right, at its discretion, to suspend services, delete accounts, or modify content as deemed
           necessary.
@@ -235,7 +235,7 @@ const TermsAndConditions = ({ mode }) => {
           }`}
         >
           The Platform may feature links to external websites (“External Sites”) not controlled by Aeon
-          Analytics FZ-LLC. The Company is not accountable for the content, updates, or links within these
+          Funded L.L.C FZ. The Company is not accountable for the content, updates, or links within these
           External Sites, which are provided for convenience only and do not imply endorsement. Certain
           services offered through the Platform may involve third-party providers, and by using these, you
           consent to the Company sharing relevant data with contracted third parties to facilitate the
@@ -257,7 +257,7 @@ const TermsAndConditions = ({ mode }) => {
         >
           You are granted a limited, non-exclusive, revocable permission to access and use the Platform in
           accordance with these Terms. All materials on the Platform, including text, images, logos, and
-          software (collectively, “Content”), are owned by Aeon Analytics FZ-LLC or its licensors and are
+          software (collectively, “Content”), are owned by Aeon Funded L.L.C FZ or its licensors and are
           protected by intellectual property laws. You agree not to alter, reproduce, distribute, or exploit
           this Content without explicit permission. Unauthorized use, such as reselling or modifying Content,
           is forbidden, and you acquire no ownership rights over it.
@@ -276,7 +276,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Aeon Analytics FZ-LLC defines “Reckless Trading” as impulsive, high-risk behavior that disregards
+          Aeon Funded L.L.C FZ defines “Reckless Trading” as impulsive, high-risk behavior that disregards
           core trading principles, threatening both individual accounts and the Company’s stability.
           Examples of such practices include:
         </p>
@@ -394,7 +394,7 @@ const TermsAndConditions = ({ mode }) => {
           }`}
         >
           The Platform and Services are provided “as is,” without warranties of accuracy, reliability, or availability.
-          Aeon Analytics FZ-LLC and its suppliers disclaim all implied warranties and shall not be liable for any
+          Aeon Funded L.L.C FZ and its suppliers disclaim all implied warranties and shall not be liable for any
           damages—direct, indirect, or otherwise—arising from your use of the Platform, even if advised of potential
           harm. Your sole remedy for dissatisfaction is to cease using the Platform.
         </p>
@@ -412,7 +412,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          You agree to defend and indemnify Aeon Analytics FZ-LLC, its affiliates, and agents against any claims,
+          You agree to defend and indemnify Aeon Funded L.L.C FZ, its affiliates, and agents against any claims,
           losses, or expenses (including legal fees) stemming from your use of the Platform, violation of these Terms,
           or infringement of third-party rights. The Company may assume control of any defense at its expense, with
           your full cooperation required.
@@ -431,7 +431,7 @@ const TermsAndConditions = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          By submitting media (e.g., images, videos) to Aeon Analytics FZ-LLC, you grant a perpetual, royalty-free,
+          By submitting media (e.g., images, videos) to Aeon Funded L.L.C FZ, you grant a perpetual, royalty-free,
           worldwide license for the Company to use, adapt, and distribute such content for promotional purposes across
           various channels. You confirm your ownership or authorization to provide this license, with no further compensation
           owed.
