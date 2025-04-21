@@ -10,7 +10,7 @@ const PrivacyPolicy = ({ mode }) => {
             mode === "dark" ? "text-white" : "text-dark1f"
           }`}
         >
-          Privacy Policy of Aeon Analytics FZ-LLC
+          Privacy Policy of Aeon Funded L.L.C FZ
         </h2>
 
         {/* Effective Date */}
@@ -28,7 +28,7 @@ const PrivacyPolicy = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Welcome to Aeon Analytics FZ-LLC (“we,” “us,” or the “Company”), accessible at <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
+          Welcome to Aeon Funded L.L.C FZ (“we,” “us,” or the “Company”), accessible at <a href='https://www.aeonfunded.com/' target='_blank' rel="noopener noreferrer" className=' text-primary font-bold'> AeonFunded.com </a> {" "}
           (the “Platform”). We are committed to protecting your privacy and ensuring the security of your
           personal information. This Privacy Policy outlines how we collect, use, store, and safeguard
           your data when you interact with our Platform and services (collectively, the “Services”). By
@@ -279,7 +279,7 @@ const PrivacyPolicy = ({ mode }) => {
             mode === "dark" ? "text-ivoryTint" : "text-dark1f opacity-80"
           }`}
         >
-          Aeon Analytics FZ-LLC operates from Dubai, UAE, and your data may be processed or stored in locations outside your region. We ensure appropriate safeguards are in place for such transfers, aligning with applicable privacy standards.
+          Aeon Funded L.L.C FZ operates from Dubai, UAE, and your data may be processed or stored in locations outside your region. We ensure appropriate safeguards are in place for such transfers, aligning with applicable privacy standards.
         </p>
 
         {/* 9. Cookies and Tracking Technologies */}
@@ -429,7 +429,7 @@ const PrivacyPolicy = ({ mode }) => {
         >
           For questions, requests, or concerns about this Privacy Policy or your data, please contact us at:
           <br /><br />
-          Aeon Analytics FZ-LLC
+          Aeon Funded L.L.C FZ
           <br />
           Email: <a href="mailto:support@aeonfunded.com" className=' text-primary list-none'>support@aeonfunded.com</a>
           <br />
