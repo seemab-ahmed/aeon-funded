@@ -10,7 +10,7 @@ import Reviews from "../components/Reviews";
 import JoinDiscord from "../components/JoinDiscord";
 import Faqs from "../components/Faqs";
 import { useLocation } from "react-router-dom";
-import OffImg from "../assets/images/off-text.png";
+import OffImg from "../assets/images/off-texts.png";
 const Home = ({ mode }) => {
   const location = useLocation();
   useEffect(() => {
