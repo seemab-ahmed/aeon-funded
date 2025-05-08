@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Banner from "../components/Banner";
 import AboutSection from "../components/AboutSection";
-import Success from "../components/Success";
+// import Success from "../components/Success";
 import HowitWorks from "../components/HowitWorks";
 import PricingPlan from "../components/PricingPlan";
 import Secure from "../components/Secure";
@@ -32,7 +32,7 @@ const Home = ({ mode }) => {
         <Banner mode={mode} />
       </div>
       <AboutSection mode={mode} />
-      <Success mode={mode} />
+      {/* <Success mode={mode} /> */}
       <HowitWorks mode={mode} />
       <PricingPlan mode={mode} />
       <Secure mode={mode} />
